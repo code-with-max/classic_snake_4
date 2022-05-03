@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://c60ejjjiny34m"]
+
+[ext_resource type="Script" path="res://Tail.gd" id="1_8nucb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uyflm"]
+size = Vector2(30, 30)
+
+[node name="Tail" type="Node2D" groups=["obstacles"]]
+script = ExtResource( "1_8nucb" )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 32.0
+offset_bottom = 32.0
+color = Color(0.329412, 0.396078, 1, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 25.0
+offset_bottom = 29.0
+text = "0"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(16, 16)
+shape = SubResource( "RectangleShape2D_uyflm" )

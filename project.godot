@@ -1,0 +1,43 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="classic_snake_4"
+run/main_scene="res://giu.tscn"
+config/icon="res://icon.png"
+config/features=PackedStringArray("4.0", "Vulkan Mobile")
+
+[autoload]
+
+G="*res://globals.gd"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/handheld/orientation=1
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[layer_names]
+
+2d_physics/layer_1="head"
+2d_physics/layer_2="walls"
+2d_physics/layer_3="tails"
+2d_physics/layer_4="food"
+
+[rendering]
+
+vulkan/rendering/back_end=1

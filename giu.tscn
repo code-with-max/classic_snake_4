@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5wsk2y33f4nq"]
+
+[ext_resource type="Theme" uid="uid://b5cjpjxj6fnt7" path="res://main_theme.tres" id="1_46ijx"]
+[ext_resource type="Script" path="res://giu.gd" id="1_eole0"]
+[ext_resource type="PackedScene" uid="uid://ixmbcwhw7oo0" path="res://snake_pit.tscn" id="3_chlf4"]
+
+[node name="GIU" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( "1_46ijx" )
+script = ExtResource( "1_eole0" )
+pit_scene = ExtResource( "3_chlf4" )
+
+[node name="CR_backgroung" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.360784, 0.360784, 0.360784, 1)
+
+[node name="MC_top" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -98.0
+offset_right = 98.0
+offset_bottom = 40.0
+
+[node name="HBox" type="HBoxContainer" parent="MC_top"]
+offset_right = 196.0
+offset_bottom = 40.0
+
+[node name="L_score_text" type="Label" parent="MC_top/HBox"]
+offset_top = 10.0
+offset_right = 96.0
+offset_bottom = 29.0
+text = "$SCORE"
+
+[node name="L_score_data" type="Label" parent="MC_top/HBox"]
+offset_left = 100.0
+offset_top = 10.0
+offset_right = 196.0
+offset_bottom = 29.0
+text = "$SCORE"
+
+[node name="MC_center" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -193.0
+offset_top = -85.0
+offset_right = 193.0
+offset_bottom = 85.0
+
+[node name="VBox" type="VBoxContainer" parent="MC_center"]
+offset_right = 386.0
+offset_bottom = 170.0
+
+[node name="B_start" type="Button" parent="MC_center/VBox"]
+offset_right = 386.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 48
+text = "$START"
+
+[node name="B_settings" type="Button" parent="MC_center/VBox"]
+offset_top = 60.0
+offset_right = 386.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 42
+text = "$SETTINGS"
+
+[node name="B_exit" type="Button" parent="MC_center/VBox"]
+offset_top = 114.0
+offset_right = 386.0
+offset_bottom = 170.0
+theme_override_font_sizes/font_size = 48
+text = "$EXIT"
+
+[node name="MC_bottom" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_top = -40.0
+offset_right = 24.0
+
+[node name="L_info" type="Label" parent="MC_bottom"]
+offset_top = 10.0
+offset_right = 80.0
+offset_bottom = 29.0
+text = "$INFO"
+
+[connection signal="pressed" from="MC_center/VBox/B_start" to="." method="_on_b_start_pressed"]
+[connection signal="pressed" from="MC_center/VBox/B_settings" to="." method="_on_b_settings_pressed"]
+[connection signal="pressed" from="MC_center/VBox/B_exit" to="." method="_on_b_exit_pressed"]

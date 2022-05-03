@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7mbc36ik82j6"]
+
+[ext_resource type="Script" path="res://wall.gd" id="1_jk7ak"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i043t"]
+size = Vector2(30, 30)
+
+[node name="Wall" type="Node2D" groups=["obstacles"]]
+script = ExtResource( "1_jk7ak" )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 32.0
+offset_bottom = 32.0
+
+[node name="Label_num" type="Label" parent="."]
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 28.0
+offset_bottom = 29.0
+text = "-"
+metadata/_edit_layout_mode = 0
+metadata/_edit_use_custom_anchors = false
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(16, 16)
+shape = SubResource( "RectangleShape2D_i043t" )
