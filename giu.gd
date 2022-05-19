@@ -26,7 +26,7 @@ func _on_b_start_pressed():
 #	$MC_center.visible = false
 #	$MC_center.set_visible(false)
 	$MC_center.hide()
-	snake_pit.set_position(Vector2(32, 64))
+	snake_pit.set_position(Vector2(48, 96))
 	add_child(snake_pit)
 	snake_pit.pit_is_destroyed.connect(on_pit_is_destroyed)
 

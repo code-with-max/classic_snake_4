@@ -22,7 +22,7 @@ func _ready():
 	$Time_step.set_wait_time(G.TIME_STEP)
 	draw_walls()
 	head = Snake_head.instantiate()
-	head.set_position(Vector2(64, 64))
+	head.set_position(Vector2(96, 96))
 	add_child(head)
 #	button.button_down.connect(_on_button_down)
 #	This is Alfa function !!!
@@ -50,23 +50,23 @@ func _input(event):
 func draw_walls():
 	var wall
 	# i fom 0 to 20
-	for i in range(0, 21):
+	for i in range(0, 13):
 		wall = Pit_wall.instantiate()
 		wall.set_position(Vector2(G.STEP * i, 0))
 		wall.show_num(i) # For debug
 		add_child(wall)
 		wall = Pit_wall.instantiate()
-		wall.set_position(Vector2(G.STEP * i, G.STEP * 30))
+		wall.set_position(Vector2(G.STEP * i, G.STEP * 20))
 		add_child(wall)
 		
 	# y from 1 to 29
-	for y in range(1, 30):
+	for y in range(1, 20):
 		wall = Pit_wall.instantiate()
 		wall.set_position(Vector2(0, G.STEP * y))
 		wall.show_num(y) # For debug
 		add_child(wall)
 		wall = Pit_wall.instantiate()
-		wall.set_position(Vector2(G.STEP * 20, G.STEP * y))
+		wall.set_position(Vector2(G.STEP * 12, G.STEP * y))
 		add_child(wall)
 
 
@@ -74,9 +74,9 @@ func draw_walls():
 func drop_new_food():
 	var food = Snake_food.instantiate()
 	# get x_pos from 1 to 19 (* 32)
-	var x_pos = (randi() % 19 + 1) * G.STEP
+	var x_pos = (randi() % 11 + 1) * G.STEP
 	# get y_pos from 1 to 29 (* 32)
-	var y_pos = (randi() % 29 + 1) * G.STEP
+	var y_pos = (randi() % 19 + 1) * G.STEP
 	food.set_position(Vector2(x_pos, y_pos))
 #	Need deffered call
 #	add_child(food)

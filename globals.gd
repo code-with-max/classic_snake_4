@@ -1,7 +1,7 @@
 extends Node
 
 
-const STEP = 32
+const STEP = 48
 const TIME_STEP = 0.8
 const DIRECTION_RELATIVE = 1
 

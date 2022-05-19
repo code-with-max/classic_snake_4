@@ -3,14 +3,14 @@
 [ext_resource type="Script" path="res://wall.gd" id="1_jk7ak"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i043t"]
-size = Vector2(30, 30)
+size = Vector2(46, 46)
 
 [node name="Wall" type="Node2D" groups=["obstacles"]]
 script = ExtResource( "1_jk7ak" )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 32.0
-offset_bottom = 32.0
+offset_right = 48.0
+offset_bottom = 48.0
 
 [node name="Label_num" type="Label" parent="."]
 offset_left = 4.0
@@ -26,5 +26,5 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(16, 16)
+position = Vector2(24, 24)
 shape = SubResource( "RectangleShape2D_i043t" )

@@ -19,9 +19,12 @@ color = Color(0.360784, 0.360784, 0.360784, 1)
 [node name="MC_top" type="MarginContainer" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -98.0
-offset_right = 98.0
-offset_bottom = 40.0
+offset_left = -89.0
+offset_top = 52.0
+offset_right = 107.0
+offset_bottom = 92.0
+grow_horizontal = 2
+metadata/_edit_layout_mode = 1
 
 [node name="HBox" type="HBoxContainer" parent="MC_top"]
 offset_right = 196.0
