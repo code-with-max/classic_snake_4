@@ -17,6 +17,12 @@ var direction = Vector2.ZERO
 var target_position = Vector2.ZERO
 
 
+enum Move_direcion {HORIZONTAL, VERTICAL}
+var CURRENT_DIR = Move_direcion.VERTICAL
+
+enum Turn_direction {UP, DOWN, LEFT, RIGHT}
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Time_step.set_wait_time(G.TIME_STEP)
@@ -36,15 +42,35 @@ func _ready():
 
 func _input(event):
 	if event is InputEventScreenDrag:
-		$Debug_labels/Rel.set_text(str(event.get_relative()))
+		$Debug_labels/Rel.set_text(str(CURRENT_DIR))
 		if event.get_relative().x > G.DIRECTION_RELATIVE:
-			direction = Vector2(G.STEP, 0)
+			turn_to(Turn_direction.LEFT)
 		elif event.get_relative().x < -G.DIRECTION_RELATIVE:
-			direction = Vector2(-G.STEP, 0)
+			turn_to(Turn_direction.RIGHT)
 		elif event.get_relative().y < -G.DIRECTION_RELATIVE:
-			direction = Vector2(0, -G.STEP)
+			turn_to(Turn_direction.DOWN)
 		elif event.get_relative().y > G.DIRECTION_RELATIVE:
-			direction = Vector2(0, G.STEP)
+			turn_to(Turn_direction.UP)
+
+
+func turn_to(turn):
+		match turn:
+			Turn_direction.LEFT:
+				if CURRENT_DIR == Move_direcion.VERTICAL:
+					direction = Vector2(G.STEP, 0)
+					CURRENT_DIR = Move_direcion.HORIZONTAL
+			Turn_direction.RIGHT:
+				if CURRENT_DIR == Move_direcion.VERTICAL:
+					direction = Vector2(-G.STEP, 0)
+					CURRENT_DIR = Move_direcion.HORIZONTAL
+			Turn_direction.UP:
+				if CURRENT_DIR == Move_direcion.HORIZONTAL:
+					direction = Vector2(0, G.STEP)
+					CURRENT_DIR = Move_direcion.VERTICAL
+			Turn_direction.DOWN:
+				if CURRENT_DIR == Move_direcion.HORIZONTAL:
+					direction = Vector2(0, -G.STEP)
+					CURRENT_DIR = Move_direcion.VERTICAL
 
 
 func draw_walls():
