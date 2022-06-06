@@ -42,35 +42,15 @@ func _ready():
 
 func _input(event):
 	if event is InputEventScreenDrag:
-		$Debug_labels/Rel.set_text(str(CURRENT_DIR))
+		$Debug_labels/Rel.set_text(str(event.get_relative()))
 		if event.get_relative().x > G.DIRECTION_RELATIVE:
-			turn_to(Turn_direction.LEFT)
+			direction = Vector2(G.STEP, 0)
 		elif event.get_relative().x < -G.DIRECTION_RELATIVE:
-			turn_to(Turn_direction.RIGHT)
+			direction = Vector2(-G.STEP, 0)
 		elif event.get_relative().y < -G.DIRECTION_RELATIVE:
-			turn_to(Turn_direction.DOWN)
+			direction = Vector2(0, -G.STEP)
 		elif event.get_relative().y > G.DIRECTION_RELATIVE:
-			turn_to(Turn_direction.UP)
-
-
-func turn_to(turn):
-		match turn:
-			Turn_direction.LEFT:
-				if CURRENT_DIR == Move_direcion.VERTICAL:
-					direction = Vector2(G.STEP, 0)
-					CURRENT_DIR = Move_direcion.HORIZONTAL
-			Turn_direction.RIGHT:
-				if CURRENT_DIR == Move_direcion.VERTICAL:
-					direction = Vector2(-G.STEP, 0)
-					CURRENT_DIR = Move_direcion.HORIZONTAL
-			Turn_direction.UP:
-				if CURRENT_DIR == Move_direcion.HORIZONTAL:
-					direction = Vector2(0, G.STEP)
-					CURRENT_DIR = Move_direcion.VERTICAL
-			Turn_direction.DOWN:
-				if CURRENT_DIR == Move_direcion.HORIZONTAL:
-					direction = Vector2(0, -G.STEP)
-					CURRENT_DIR = Move_direcion.VERTICAL
+			direction = Vector2(0, G.STEP)
 
 
 func draw_walls():
