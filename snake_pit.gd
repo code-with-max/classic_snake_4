@@ -17,10 +17,10 @@ var direction = Vector2.ZERO
 var target_position = Vector2.ZERO
 
 
-enum Move_direcion {HORIZONTAL, VERTICAL}
-var CURRENT_DIR = Move_direcion.VERTICAL
+enum MOVE {HORIZONTAL, VERTICAL}
+var CURRENT_DIR = MOVE.VERTICAL
+var AVAIBLE_TURN = true
 
-enum Turn_direction {UP, DOWN, LEFT, RIGHT}
 
 
 # Called when the node enters the scene tree for the first time.
@@ -41,16 +41,27 @@ func _ready():
 
 
 func _input(event):
-	if event is InputEventScreenDrag:
-		$Debug_labels/Rel.set_text(str(event.get_relative()))
-		if event.get_relative().x > G.DIRECTION_RELATIVE:
-			direction = Vector2(G.STEP, 0)
-		elif event.get_relative().x < -G.DIRECTION_RELATIVE:
-			direction = Vector2(-G.STEP, 0)
-		elif event.get_relative().y < -G.DIRECTION_RELATIVE:
-			direction = Vector2(0, -G.STEP)
-		elif event.get_relative().y > G.DIRECTION_RELATIVE:
-			direction = Vector2(0, G.STEP)
+	if event is InputEventScreenDrag and AVAIBLE_TURN:
+			$Debug_labels/Rel.set_text(str(event.get_relative()))
+			match CURRENT_DIR:
+				MOVE.VERTICAL:
+					if event.get_relative().x > G.DIRECTION_RELATIVE:
+						direction = Vector2(G.STEP, 0)
+						AVAIBLE_TURN = false
+						CURRENT_DIR = MOVE.HORIZONTAL
+					elif event.get_relative().x < -G.DIRECTION_RELATIVE:
+						direction = Vector2(-G.STEP, 0)
+						AVAIBLE_TURN = false
+						CURRENT_DIR = MOVE.HORIZONTAL
+				MOVE.HORIZONTAL:
+					if event.get_relative().y < -G.DIRECTION_RELATIVE:
+						direction = Vector2(0, -G.STEP)
+						AVAIBLE_TURN = false
+						CURRENT_DIR = MOVE.VERTICAL
+					elif event.get_relative().y > G.DIRECTION_RELATIVE:
+						direction = Vector2(0, G.STEP)
+						AVAIBLE_TURN = false
+						CURRENT_DIR = MOVE.VERTICAL
 
 
 func draw_walls():
@@ -104,6 +115,7 @@ func snake_move():
 		var old_position = tail.get_position()
 		tail.set_position(target_position)
 		target_position = old_position
+	AVAIBLE_TURN = true
 
 func on_head_collision():
 	emit_signal("pit_is_destroyed")
