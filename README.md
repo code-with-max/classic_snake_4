@@ -78,3 +78,80 @@
 
 Ну и несколько полей для отображения игровой информации.
 Добавляем в основой теме шрифт на другой.
+
+
+#### 10 Часть. GUI Функционал
+Добавляем функционала в графическое меню.  Пишем функции запуска игры и выхода при нажатии соответствующих кнопок.
+
+Eng:
+Adding functionality to the graphical menu. We write the functions of starting the game and exiting when the corresponding buttons are pressed.
+
+[Смотреть на YouTube](https://youtu.be/sFXFtuPjUfc)
+
+
+#### 11 Часть. Установка Android Studio и Java
+Установка в Ubuntu необходимых компонентов для сборки игры на движке Godot 4 в apk и aab:
+
+- Android Studio 
+- Android SDK
+- Android SDK CLI
+- CMake
+- NDK
+- JAVA 11 (jre и jdk)
+- Godot Export templates (Шаблоны экспорта)
+
+Eng: 
+Installing the required components in Ubuntu to build a game on the Godot 4 engine in APK or AAB
+
+[Смотреть на YouTube](https://youtu.be/v9bVNiKF63U)
+
+
+#### 12 Часть. Экспорт игры в APK
+Экспортирование игры в APK файл.
+- Создание пары отлажочных ключей в java keystore
+- Экспорт в режиме отладки подписанной версии игры в APK файл
+- Запуск приложения в эмуляторе Android Studio
+- Запуск приложения на реальном телефоне. (Nokia, вроде бы...)
+
+Eng:
+Export game to APK from Godot 4
+
+[Смотреть на YouTube](https://youtu.be/pnonAjVaV94)
+
+
+#### 13 Часть. Экспорт приложения в AAB
+Экспорт в Android App Bundle (AAB)
+- Генерация пары ключей для подписи AAB файла для загрузки в Play Market
+- Краткие настройки экспорта игры из Godot 4 (alfa 6)
+- Обзор графических инструментов для работы с Java Keytool в Windows и Linux
+
+[Создание ключей для подписи Anroid приложений в Godot](https://trash-max.github.io/howto/keystore/)
+
+Eng:
+Export to Android App Bundle (AAB)
+- Generation of a key pair for signing an AAB file for uploading to the Play Market
+- Brief settings for exporting the game from Godot 4
+- Overview of graphical tools for working with Java Keytool on Windows and Linux
+
+[Смотреть на YouTube](https://youtu.be/id9Qrt_izYg)
+
+
+#### 14 Часть. Git и GitHub.
+Делаем новый Git для нашего проекта и заливаем его на GitHub.
+(Ну и все такое, инициализация там, ветки всякие, опенсорс, коммиты, пушы и т.д.)
+
+Eng:
+Initialize a new Git for the project and upload it to GitHub.
+(And all that, initialization there, different branches, open source, commits, push, etc.)
+
+[Смотреть на YouTube](https://youtu.be/uavbHZyAGcI)
+
+
+#### 15 Часть. Заливаем в Play Market
+Загружаем первый выпуск игры в Play Market для внутреннего тестирования.
+
+Eng:
+Uploading the first release of the game to the Play Market for internal testing.
+
+
+
