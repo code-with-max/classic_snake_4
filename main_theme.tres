@@ -3,7 +3,7 @@
 [ext_resource type="FontData" uid="uid://b3fbq8qiqrwtr" path="res://fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="1_0upic"]
 
 [sub_resource type="Font" id="Font_7vjbl"]
-data/0 = ExtResource( "1_0upic" )
+data/0 = ExtResource("1_0upic")
 
 [resource]
-default_font = SubResource( "Font_7vjbl" )
+default_font = SubResource("Font_7vjbl")

@@ -6,8 +6,16 @@ signal get_some_food
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$ColorRect.set_color(Color.ROYAL_BLUE)
-#	$ColorRect.color = Color.ROYAL_BLUE
+	if G.head_texture:
+		$Sprite2D.set_texture(G.head_texture)
+		$Sprite2D.set_position(Vector2(24, 24))
+		$Sprite2D.set_scale(Vector2(0.32, 0.32))
+#		$Sprite2D.set_visible(true)
+		$Sprite2D.show()
+	else: 
+#		$ColorRect.color = Color.ROYAL_BLUE
+		$ColorRect.set_color(Color.ROYAL_BLUE)
+		$ColorRect.show()
 
 
 

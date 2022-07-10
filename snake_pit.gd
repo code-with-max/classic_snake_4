@@ -6,6 +6,7 @@ extends Node2D
 @export var Pit_wall: PackedScene
 @export var Snake_food: PackedScene
 @export var Snake_tail: PackedScene
+@export var Floor_tail: PackedScene
 
 signal pit_is_destroyed
 
@@ -27,6 +28,7 @@ var AVAIBLE_TURN = true
 func _ready():
 	$Time_step.set_wait_time(G.TIME_STEP)
 	draw_walls()
+	draw_floor()
 	head = Snake_head.instantiate()
 	head.set_position(Vector2(96, 96))
 	add_child(head)
@@ -86,6 +88,13 @@ func draw_walls():
 		wall.set_position(Vector2(G.STEP * 12, G.STEP * y))
 		add_child(wall)
 
+
+func draw_floor():
+	for i in range (1, 12):
+		for y in range (1, 20):
+			var floor_tail = Floor_tail.instantiate()
+			floor_tail.set_position(Vector2(i * G.STEP, y * G.STEP))
+			add_child(floor_tail)
 
 
 func drop_new_food():

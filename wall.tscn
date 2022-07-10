@@ -6,11 +6,15 @@
 size = Vector2(46, 46)
 
 [node name="Wall" type="Node2D" groups=["obstacles"]]
-script = ExtResource( "1_jk7ak" )
+script = ExtResource("1_jk7ak")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_right = 48.0
 offset_bottom = 48.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 
 [node name="Label_num" type="Label" parent="."]
 offset_left = 4.0
@@ -27,4 +31,4 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(24, 24)
-shape = SubResource( "RectangleShape2D_i043t" )
+shape = SubResource("RectangleShape2D_i043t")

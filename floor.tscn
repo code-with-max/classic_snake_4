@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq8w24df5ei82"]
+
+[ext_resource type="Script" path="res://floor.gd" id="1_6yyvp"]
+
+[node name="floor" type="Node2D"]
+script = ExtResource("1_6yyvp")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 48.0
+offset_bottom = 48.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
