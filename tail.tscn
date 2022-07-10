@@ -6,12 +6,16 @@
 size = Vector2(46, 46)
 
 [node name="Tail" type="Node2D" groups=["obstacles"]]
-script = ExtResource( "1_8nucb" )
+script = ExtResource("1_8nucb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_right = 48.0
 offset_bottom = 48.0
 color = Color(0.329412, 0.396078, 1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 
 [node name="Label" type="Label" parent="."]
 offset_left = 3.0
@@ -26,4 +30,4 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(24, 24)
-shape = SubResource( "RectangleShape2D_uyflm" )
+shape = SubResource("RectangleShape2D_uyflm")

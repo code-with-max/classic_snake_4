@@ -1,25 +1,27 @@
-[gd_scene load_steps=7 format=3 uid="uid://ixmbcwhw7oo0"]
+[gd_scene load_steps=8 format=3 uid="uid://ixmbcwhw7oo0"]
 
 [ext_resource type="Script" path="res://snake_pit.gd" id="1_vi1c5"]
 [ext_resource type="PackedScene" uid="uid://d3m6dp3b86aox" path="res://snake_head.tscn" id="2_f8883"]
 [ext_resource type="PackedScene" uid="uid://b7mbc36ik82j6" path="res://wall.tscn" id="3_4e00a"]
 [ext_resource type="PackedScene" uid="uid://dwdu1m1ajhe12" path="res://food.tscn" id="4_u3eu5"]
 [ext_resource type="PackedScene" uid="uid://c60ejjjiny34m" path="res://tail.tscn" id="5_eycwg"]
+[ext_resource type="PackedScene" uid="uid://dq8w24df5ei82" path="res://floor.tscn" id="6_r4m0i"]
 
 [sub_resource type="Theme" id="Theme_7b3uf"]
 default_font_size = 48
 
 [node name="Snake_pit" type="Node2D"]
-script = ExtResource( "1_vi1c5" )
-Snake_head = ExtResource( "2_f8883" )
-Pit_wall = ExtResource( "3_4e00a" )
-Snake_food = ExtResource( "4_u3eu5" )
-Snake_tail = ExtResource( "5_eycwg" )
+script = ExtResource("1_vi1c5")
+Snake_head = ExtResource("2_f8883")
+Pit_wall = ExtResource("3_4e00a")
+Snake_food = ExtResource("4_u3eu5")
+Snake_tail = ExtResource("5_eycwg")
+Floor_tail = ExtResource("6_r4m0i")
 
 [node name="Debug_labels" type="Control" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
-theme = SubResource( "Theme_7b3uf" )
+theme = SubResource("Theme_7b3uf")
 
 [node name="Rel" type="Label" parent="Debug_labels"]
 offset_left = 424.0

@@ -6,11 +6,15 @@
 size = Vector2(46, 46)
 
 [node name="Food" type="Node2D" groups=["food"]]
-script = ExtResource( "1_01fob" )
+script = ExtResource("1_01fob")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_right = 48.0
 offset_bottom = 48.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 8
@@ -18,4 +22,4 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(24, 24)
-shape = SubResource( "RectangleShape2D_ib4qw" )
+shape = SubResource("RectangleShape2D_ib4qw")
