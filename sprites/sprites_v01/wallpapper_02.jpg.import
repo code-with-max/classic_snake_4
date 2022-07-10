@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2ssfgisheme0"
-path="res://.godot/imported/wall_03.png-6d0136c4436172bfb0cdf85977ae2537.ctex"
+uid="uid://b1ws3248fv7sp"
+path="res://.godot/imported/wallpapper_02.jpg-27356e939dc0a58d4ed1124a15f9b968.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/sprites_v01/wall_03.png"
-dest_files=["res://.godot/imported/wall_03.png-6d0136c4436172bfb0cdf85977ae2537.ctex"]
+source_file="res://sprites/sprites_v01/wallpapper_02.jpg"
+dest_files=["res://.godot/imported/wallpapper_02.jpg-27356e939dc0a58d4ed1124a15f9b968.ctex"]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/hdr_compression=1
 compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
