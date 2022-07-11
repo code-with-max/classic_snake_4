@@ -10,6 +10,9 @@ export_presets.cfg
 # Android custom builds
 android/
 
+# Godot *exe file
+godot.exe
+
 # Dummy HTML5 export presets file for continuous integration
 !.github/dist/export_presets.cfg
 

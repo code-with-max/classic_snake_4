@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmxmwl5ngms3w"
-path="res://.godot/imported/aplle_01.png-ab983cb5a2ec1ebb7c7513e40845d681.ctex"
+uid="uid://c7ku2by8bsvis"
+path="res://.godot/imported/floor_01.png-5c8e2ece80d36adb817e1c6dd1c4b3cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/sprites_v01/aplle_01.png"
-dest_files=["res://.godot/imported/aplle_01.png-ab983cb5a2ec1ebb7c7513e40845d681.ctex"]
+source_file="res://floor/floor_01.png"
+dest_files=["res://.godot/imported/floor_01.png-5c8e2ece80d36adb817e1c6dd1c4b3cf.ctex"]
 
 [params]
 
