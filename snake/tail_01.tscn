@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c60ejjjiny34m"]
+[gd_scene load_steps=4 format=3 uid="uid://cu21dltstxmok"]
 
-[ext_resource type="Script" path="res://Tail.gd" id="1_8nucb"]
+[ext_resource type="Script" path="res://snake/tail_01.gd" id="1_8nucb"]
+[ext_resource type="Texture2D" uid="uid://74hadivypxp" path="res://snake/tail_01.png" id="2_4lp2y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uyflm"]
 size = Vector2(46, 46)
@@ -15,9 +16,11 @@ offset_bottom = 48.0
 color = Color(0.329412, 0.396078, 1, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
+texture = ExtResource("2_4lp2y")
+centered = false
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = 3.0
 offset_top = 3.0
 offset_right = 25.0
