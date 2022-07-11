@@ -2,11 +2,11 @@ extends Node2D
 
 
 #var Snake_head = preload("res://Snake_head.gd")
-@export var Snake_head: PackedScene
-@export var Pit_wall: PackedScene
-@export var Snake_food: PackedScene
-@export var Snake_tail: PackedScene
-@export var Floor_tail: PackedScene
+@export var HeadScene: PackedScene
+@export var TailScene: PackedScene
+@export var WallScene: PackedScene
+@export var FoodScene: PackedScene
+@export var FloorScene: PackedScene
 
 signal pit_is_destroyed
 
@@ -26,10 +26,12 @@ var AVAIBLE_TURN = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if G.DEBUG:
+		$Debug_labels.show()
 	$Time_step.set_wait_time(G.TIME_STEP)
 	draw_walls()
 	draw_floor()
-	head = Snake_head.instantiate()
+	head = HeadScene.instantiate()
 	head.set_position(Vector2(96, 96))
 	add_child(head)
 #	button.button_down.connect(_on_button_down)
@@ -44,47 +46,50 @@ func _ready():
 
 func _input(event):
 	if event is InputEventScreenDrag and AVAIBLE_TURN:
+		if G.DEBUG:
 			$Debug_labels/Rel.set_text(str(event.get_relative()))
-			match CURRENT_DIR:
-				MOVE.VERTICAL:
-					if event.get_relative().x > G.DIRECTION_RELATIVE:
-						direction = Vector2(G.STEP, 0)
-						AVAIBLE_TURN = false
-						CURRENT_DIR = MOVE.HORIZONTAL
-					elif event.get_relative().x < -G.DIRECTION_RELATIVE:
-						direction = Vector2(-G.STEP, 0)
-						AVAIBLE_TURN = false
-						CURRENT_DIR = MOVE.HORIZONTAL
-				MOVE.HORIZONTAL:
-					if event.get_relative().y < -G.DIRECTION_RELATIVE:
-						direction = Vector2(0, -G.STEP)
-						AVAIBLE_TURN = false
-						CURRENT_DIR = MOVE.VERTICAL
-					elif event.get_relative().y > G.DIRECTION_RELATIVE:
-						direction = Vector2(0, G.STEP)
-						AVAIBLE_TURN = false
-						CURRENT_DIR = MOVE.VERTICAL
+		match CURRENT_DIR:
+			MOVE.VERTICAL:
+				if event.get_relative().x > G.DIRECTION_RELATIVE:
+					direction = Vector2(G.STEP, 0)
+					AVAIBLE_TURN = false
+					CURRENT_DIR = MOVE.HORIZONTAL
+				elif event.get_relative().x < -G.DIRECTION_RELATIVE:
+					direction = Vector2(-G.STEP, 0)
+					AVAIBLE_TURN = false
+					CURRENT_DIR = MOVE.HORIZONTAL
+			MOVE.HORIZONTAL:
+				if event.get_relative().y < -G.DIRECTION_RELATIVE:
+					direction = Vector2(0, -G.STEP)
+					AVAIBLE_TURN = false
+					CURRENT_DIR = MOVE.VERTICAL
+				elif event.get_relative().y > G.DIRECTION_RELATIVE:
+					direction = Vector2(0, G.STEP)
+					AVAIBLE_TURN = false
+					CURRENT_DIR = MOVE.VERTICAL
 
 
 func draw_walls():
 	var wall
-	# i fom 0 to 20
+	# i fom 0 to 12
 	for i in range(0, 13):
-		wall = Pit_wall.instantiate()
+		wall = WallScene.instantiate()
 		wall.set_position(Vector2(G.STEP * i, 0))
-		wall.show_num(i) # For debug
+		if G.DEBUG:
+			wall.show_num(i) # For debug
 		add_child(wall)
-		wall = Pit_wall.instantiate()
+		wall = WallScene.instantiate()
 		wall.set_position(Vector2(G.STEP * i, G.STEP * 20))
 		add_child(wall)
 		
-	# y from 1 to 29
+	# y from 1 to 19
 	for y in range(1, 20):
-		wall = Pit_wall.instantiate()
+		wall = WallScene.instantiate()
 		wall.set_position(Vector2(0, G.STEP * y))
-		wall.show_num(y) # For debug
+		if G.DEBUG:
+			wall.show_num(y) # For debug
 		add_child(wall)
-		wall = Pit_wall.instantiate()
+		wall = WallScene.instantiate()
 		wall.set_position(Vector2(G.STEP * 12, G.STEP * y))
 		add_child(wall)
 
@@ -92,13 +97,13 @@ func draw_walls():
 func draw_floor():
 	for i in range (1, 12):
 		for y in range (1, 20):
-			var floor_tail = Floor_tail.instantiate()
+			var floor_tail = FloorScene.instantiate()
 			floor_tail.set_position(Vector2(i * G.STEP, y * G.STEP))
 			add_child(floor_tail)
 
 
 func drop_new_food():
-	var food = Snake_food.instantiate()
+	var food = FoodScene.instantiate()
 	# get x_pos from 1 to 19 (* 32)
 	var x_pos = (randi() % 11 + 1) * G.STEP
 	# get y_pos from 1 to 29 (* 32)
@@ -110,11 +115,12 @@ func drop_new_food():
 
 
 func add_new_tail():
-	var tail = Snake_tail.instantiate()
+	var tail = TailScene.instantiate()
 	tail.set_position(target_position)
 	call_deferred("add_child", tail)
 	tails.append(tail)
-	tail.show_num(tails.size())
+	if G.DEBUG:
+		tail.show_num(tails.size())
 
 
 func snake_move():
@@ -138,14 +144,3 @@ func on_get_some_food():
 
 func _on_time_step_timeout():
 	snake_move()
-
-
-
-
-
-
-
-
-
-
-

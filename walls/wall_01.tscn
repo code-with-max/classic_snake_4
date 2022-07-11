@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7mbc36ik82j6"]
+[gd_scene load_steps=4 format=3 uid="uid://boyubseky6ga2"]
 
-[ext_resource type="Script" path="res://wall.gd" id="1_jk7ak"]
+[ext_resource type="Script" path="res://walls/wall_01.gd" id="1_jk7ak"]
+[ext_resource type="Texture2D" uid="uid://bkxid0ck0cx33" path="res://walls/wall_01.png" id="2_chjv2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i043t"]
 size = Vector2(46, 46)
@@ -14,9 +15,11 @@ offset_right = 48.0
 offset_bottom = 48.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
+texture = ExtResource("2_chjv2")
+centered = false
 
 [node name="Label_num" type="Label" parent="."]
+visible = false
 offset_left = 4.0
 offset_top = 3.0
 offset_right = 28.0
@@ -32,3 +35,6 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(24, 24)
 shape = SubResource("RectangleShape2D_i043t")
+
+[node name="Wall01" type="Sprite2D" parent="."]
+position = Vector2(1360, 10)

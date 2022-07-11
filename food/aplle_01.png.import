@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkxid0ck0cx33"
-path="res://.godot/imported/wall_01.png-cb02d0cc608b05950adefd0f901548d5.ctex"
+uid="uid://bmxmwl5ngms3w"
+path="res://.godot/imported/aplle_01.png-6c182aafb8a650db166755094de71ec2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/sprites_v01/wall_01.png"
-dest_files=["res://.godot/imported/wall_01.png-cb02d0cc608b05950adefd0f901548d5.ctex"]
+source_file="res://food/aplle_01.png"
+dest_files=["res://.godot/imported/aplle_01.png-6c182aafb8a650db166755094de71ec2.ctex"]
 
 [params]
 

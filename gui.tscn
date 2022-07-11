@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5wsk2y33f4nq"]
+[gd_scene load_steps=5 format=3 uid="uid://8o8yrbbx1npf"]
 
 [ext_resource type="Theme" uid="uid://b5cjpjxj6fnt7" path="res://main_theme.tres" id="1_46ijx"]
-[ext_resource type="Script" path="res://giu.gd" id="1_eole0"]
-[ext_resource type="PackedScene" uid="uid://ixmbcwhw7oo0" path="res://snake_pit.tscn" id="3_chlf4"]
+[ext_resource type="Script" path="res://gui.gd" id="1_eole0"]
+[ext_resource type="PackedScene" uid="uid://vvrbnfokwc4g" path="res://snake_pit.tscn" id="3_chlf4"]
 [ext_resource type="Texture2D" uid="uid://b1ws3248fv7sp" path="res://sprites/sprites_v01/wallpapper_02.jpg" id="4_7ddin"]
 
 [node name="GIU" type="Control"]

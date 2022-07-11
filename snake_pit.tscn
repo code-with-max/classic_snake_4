@@ -1,24 +1,25 @@
-[gd_scene load_steps=8 format=3 uid="uid://ixmbcwhw7oo0"]
+[gd_scene load_steps=8 format=3 uid="uid://vvrbnfokwc4g"]
 
 [ext_resource type="Script" path="res://snake_pit.gd" id="1_vi1c5"]
-[ext_resource type="PackedScene" uid="uid://d3m6dp3b86aox" path="res://snake_head.tscn" id="2_f8883"]
-[ext_resource type="PackedScene" uid="uid://b7mbc36ik82j6" path="res://wall.tscn" id="3_4e00a"]
-[ext_resource type="PackedScene" uid="uid://dwdu1m1ajhe12" path="res://food.tscn" id="4_u3eu5"]
-[ext_resource type="PackedScene" uid="uid://c60ejjjiny34m" path="res://tail.tscn" id="5_eycwg"]
-[ext_resource type="PackedScene" uid="uid://dq8w24df5ei82" path="res://floor.tscn" id="6_r4m0i"]
+[ext_resource type="PackedScene" path="res://snake/head.tscn" id="2_f8883"]
+[ext_resource type="PackedScene" uid="uid://boyubseky6ga2" path="res://walls/wall_01.tscn" id="3_24j5k"]
+[ext_resource type="PackedScene" uid="uid://5fbiwe7ha5xv" path="res://food/red_apple.tscn" id="4_4i0xv"]
+[ext_resource type="PackedScene" uid="uid://cu21dltstxmok" path="res://snake/tail_01.tscn" id="5_eycwg"]
+[ext_resource type="PackedScene" path="res://floor/floor_01.tscn" id="6_r4m0i"]
 
 [sub_resource type="Theme" id="Theme_7b3uf"]
 default_font_size = 48
 
 [node name="Snake_pit" type="Node2D"]
 script = ExtResource("1_vi1c5")
-Snake_head = ExtResource("2_f8883")
-Pit_wall = ExtResource("3_4e00a")
-Snake_food = ExtResource("4_u3eu5")
-Snake_tail = ExtResource("5_eycwg")
-Floor_tail = ExtResource("6_r4m0i")
+HeadScene = ExtResource("2_f8883")
+TailScene = ExtResource("5_eycwg")
+WallScene = ExtResource("3_24j5k")
+FoodScene = ExtResource("4_4i0xv")
+FloorScene = ExtResource("6_r4m0i")
 
 [node name="Debug_labels" type="Control" parent="."]
+visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 theme = SubResource("Theme_7b3uf")

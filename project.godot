@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="classic_snake_4"
-run/main_scene="res://giu.tscn"
+run/main_scene="res://gui.tscn"
 config/features=PackedStringArray("4.0", "Vulkan Mobile")
 config/icon="res://icon.png"
 
