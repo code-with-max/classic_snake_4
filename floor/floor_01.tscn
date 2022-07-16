@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://cw1qtyxe7wuot"]
 
 [ext_resource type="Script" path="res://floor/floor_01.gd" id="1_6yyvp"]
-[ext_resource type="Texture2D" uid="uid://c7ku2by8bsvis" path="res://floor/floor_01.png" id="2_a3tsy"]
+[ext_resource type="Texture2D" uid="uid://c7ku2by8bsvis" path="res://floor/floor_01.png" id="2_u5yv4"]
 
 [node name="floor" type="Node2D"]
 script = ExtResource("1_6yyvp")
@@ -12,5 +12,5 @@ offset_right = 48.0
 offset_bottom = 48.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_a3tsy")
+texture = ExtResource("2_u5yv4")
 centered = false

@@ -1,11 +1,12 @@
 extends Control
 
 
-@export var pit_scene: PackedScene
+@export var pit_scene: PackedScene = preload("res://snake_pit.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$CR_backgroung.set_color(Color.DARK_CYAN)
+	print("start")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
