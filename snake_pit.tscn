@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://vvrbnfokwc4g"]
 
 [ext_resource type="Script" path="res://snake_pit.gd" id="1_vi1c5"]
-[ext_resource type="PackedScene" path="res://snake/head.tscn" id="2_f8883"]
+[ext_resource type="PackedScene" uid="uid://c0t64pvrf1qs8" path="res://snake/head.tscn" id="2_f8883"]
 [ext_resource type="PackedScene" uid="uid://boyubseky6ga2" path="res://walls/wall_01.tscn" id="3_24j5k"]
 [ext_resource type="PackedScene" uid="uid://5fbiwe7ha5xv" path="res://food/red_apple.tscn" id="4_4i0xv"]
 [ext_resource type="PackedScene" uid="uid://cu21dltstxmok" path="res://snake/tail_01.tscn" id="5_eycwg"]
-[ext_resource type="PackedScene" path="res://floor/floor_01.tscn" id="6_r4m0i"]
+[ext_resource type="PackedScene" uid="uid://cw1qtyxe7wuot" path="res://floor/floor_01.tscn" id="6_r4m0i"]
 
 [sub_resource type="Theme" id="Theme_7b3uf"]
 default_font_size = 48
