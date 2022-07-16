@@ -4,7 +4,11 @@ extends Node2D
 #var Snake_head = preload("res://Snake_head.gd")
 @export var HeadScene: PackedScene
 @export var TailScene: PackedScene
-@export var WallScene: PackedScene
+
+@export var WallScene_01: PackedScene = preload("res://walls/wall_01.tscn")
+@export var WallScene_02: PackedScene = preload("res://walls/wall_02.tscn")
+@export var WallScene_03: PackedScene = preload("res://walls/wall_03.tscn")
+
 @export var FoodScene: PackedScene
 @export var FloorScene: PackedScene
 
@@ -73,25 +77,35 @@ func draw_walls():
 	var wall
 	# i fom 0 to 12
 	for i in range(0, 13):
-		wall = WallScene.instantiate()
+		wall = choose_wall()
 		wall.set_position(Vector2(G.STEP * i, 0))
 		if G.DEBUG:
 			wall.show_num(i) # For debug
 		add_child(wall)
-		wall = WallScene.instantiate()
+		wall = choose_wall()
 		wall.set_position(Vector2(G.STEP * i, G.STEP * 20))
 		add_child(wall)
 		
 	# y from 1 to 19
 	for y in range(1, 20):
-		wall = WallScene.instantiate()
+		wall = choose_wall()
 		wall.set_position(Vector2(0, G.STEP * y))
 		if G.DEBUG:
 			wall.show_num(y) # For debug
 		add_child(wall)
-		wall = WallScene.instantiate()
+		wall = choose_wall()
 		wall.set_position(Vector2(G.STEP * 12, G.STEP * y))
 		add_child(wall)
+
+
+func choose_wall():
+	var i = randi() % 21
+	if i < 10:
+		return WallScene_01.instantiate()
+	elif i > 15:
+		return WallScene_02.instantiate()
+	else:
+		return WallScene_03.instantiate()
 
 
 func draw_floor():

@@ -1,20 +1,7 @@
-# Godot 4+ specific ignores
-.godot/
-
 # Godot-specific ignores
 .import/
-# *.import
 export.cfg
 export_presets.cfg
-
-# Android custom builds
-android/
-
-# Godot *exe file
-godot.exe
-
-# Dummy HTML5 export presets file for continuous integration
-!.github/dist/export_presets.cfg
 
 # Imported translations (automatically generated from CSV files)
 *.translation
@@ -23,6 +10,9 @@ godot.exe
 .mono/
 data_*/
 mono_crash.*.json
+
+# Dummy HTML5 export presets file for continuous integration
+!.github/dist/export_presets.cfg
 
 # System/tool-specific ignores
 .directory

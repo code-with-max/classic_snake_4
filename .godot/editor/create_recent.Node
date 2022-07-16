@@ -1,0 +1,15 @@
+TextureRect
+Sprite2D
+ColorRect
+Label
+MarginContainer
+Button
+VBoxContainer
+HBoxContainer
+RichTextLabel
+HFlowContainer
+Control
+Node
+CollisionShape2D
+Area2D
+Timer

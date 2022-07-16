@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://boyubseky6ga2"]
 
 [ext_resource type="Script" path="res://walls/wall_01.gd" id="1_jk7ak"]
-[ext_resource type="Texture2D" uid="uid://bkxid0ck0cx33" path="res://walls/wall_01.png" id="2_4vdmh"]
+[ext_resource type="Texture2D" uid="uid://bkxid0ck0cx33" path="res://walls/wall_01.png" id="2_cymq6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i043t"]
 size = Vector2(46, 46)
@@ -15,7 +15,7 @@ offset_right = 48.0
 offset_bottom = 48.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_4vdmh")
+texture = ExtResource("2_cymq6")
 centered = false
 
 [node name="Label_num" type="Label" parent="."]

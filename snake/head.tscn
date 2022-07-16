@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0t64pvrf1qs8"]
 
 [ext_resource type="Script" path="res://snake/head.gd" id="1_y1hmn"]
-[ext_resource type="Texture2D" uid="uid://b8amlvc2g3hgm" path="res://snake/head.png" id="2_12yw8"]
+[ext_resource type="Texture2D" uid="uid://b8amlvc2g3hgm" path="res://snake/head.png" id="2_1i2yb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i0a86"]
 size = Vector2(46, 46)
@@ -17,7 +17,7 @@ color = Color(0.0352941, 0.0196078, 1, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.32, 0.32)
-texture = ExtResource("2_12yw8")
+texture = ExtResource("2_1i2yb")
 centered = false
 
 [node name="Area2D" type="Area2D" parent="."]
