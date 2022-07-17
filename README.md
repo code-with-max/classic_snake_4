@@ -154,4 +154,11 @@ Eng:
 Uploading the first release of the game to the Play Market for internal testing.
 
 
+...
+
+#### 22 Часть. Выбор сегментов стены
+Организация случайного выбора сегментов стены.
+
+
+
 

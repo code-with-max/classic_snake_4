@@ -7,7 +7,7 @@ export_presets.cfg
 *.translation
 
 # Android custom build folders
-android/
+# android/
 
 # Mono-specific ignores
 .mono/
