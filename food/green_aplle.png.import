@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmxmwl5ngms3w"
-path="res://.godot/imported/aplle_01.png-6c182aafb8a650db166755094de71ec2.ctex"
+uid="uid://cwhnlw52igsjw"
+path="res://.godot/imported/green_aplle.png-a886c3ff85559fde86b17df94fab81ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://food/aplle_01.png"
-dest_files=["res://.godot/imported/aplle_01.png-6c182aafb8a650db166755094de71ec2.ctex"]
+source_file="res://food/green_aplle.png"
+dest_files=["res://.godot/imported/green_aplle.png-a886c3ff85559fde86b17df94fab81ad.ctex"]
 
 [params]
 

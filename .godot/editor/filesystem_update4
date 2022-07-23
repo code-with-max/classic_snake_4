@@ -1,5 +1,7 @@
-res://walls/wall_02.tscn
-res://snake_pit.tscn
-res://snake_pit.gd
 res://gui.tscn
+res://snake_pit.tscn
+res://walls/wall_02.tscn
 res://walls/wall_03.tscn
+res://snake_pit.gd
+res://food/green_apple.tscn
+res://food/red_apple.tscn

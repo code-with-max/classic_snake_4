@@ -1,13 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://5fbiwe7ha5xv"]
+[gd_scene load_steps=4 format=3 uid="uid://c1bux8g0xoofq"]
 
-[ext_resource type="Script" path="res://food/red_apple.gd" id="1_4s4ee"]
-[ext_resource type="Texture2D" uid="uid://bmxmwl5ngms3w" path="res://food/red_aplle.png" id="2_kt7iy"]
+[ext_resource type="Script" path="res://food/green_apple.gd" id="1_muo14"]
+[ext_resource type="Texture2D" uid="uid://cwhnlw52igsjw" path="res://food/green_aplle.png" id="2_dmslb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ib4qw"]
 size = Vector2(46, 46)
 
 [node name="Food" type="Node2D" groups=["food"]]
-script = ExtResource("1_4s4ee")
+script = ExtResource("1_muo14")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -15,7 +15,7 @@ offset_right = 48.0
 offset_bottom = 48.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_kt7iy")
+texture = ExtResource("2_dmslb")
 centered = false
 
 [node name="Area2D" type="Area2D" parent="."]
