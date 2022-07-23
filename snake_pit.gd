@@ -9,7 +9,10 @@ extends Node2D
 @export var WallScene_02: PackedScene = preload("res://walls/wall_02.tscn")
 @export var WallScene_03: PackedScene = preload("res://walls/wall_03.tscn")
 
-@export var FoodScene: PackedScene
+@export var FoodScene_01: PackedScene = preload("res://food/red_apple.tscn")
+@export var FoodScene_02: PackedScene = preload("res://food/green_apple.tscn")
+
+
 @export var FloorScene: PackedScene
 
 signal pit_is_destroyed
@@ -117,7 +120,7 @@ func draw_floor():
 
 
 func drop_new_food():
-	var food = FoodScene.instantiate()
+	var food = choose_food()
 	# get x_pos from 1 to 19 (* 32)
 	var x_pos = (randi() % 11 + 1) * G.STEP
 	# get y_pos from 1 to 29 (* 32)
@@ -126,6 +129,14 @@ func drop_new_food():
 #	Need deffered call
 #	add_child(food)
 	call_deferred("add_child", food)
+
+
+func choose_food():
+	var i = randi() % 21
+	if i <=10:
+		return FoodScene_01.instantiate()
+	else:
+		return FoodScene_02.instantiate()
 
 
 func add_new_tail():
