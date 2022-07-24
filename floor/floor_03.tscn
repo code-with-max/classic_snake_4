@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlr01nge03bg5"]
+
+[ext_resource type="Script" path="res://floor/floor_03.gd" id="1_7056a"]
+[ext_resource type="Texture2D" uid="uid://cuqdh3vxbokn6" path="res://floor/floor_03.png" id="2_786hh"]
+
+[node name="floor" type="Node2D"]
+script = ExtResource("1_7056a")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 48.0
+offset_bottom = 48.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_786hh")
+centered = false

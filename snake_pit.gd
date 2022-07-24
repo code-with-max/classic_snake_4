@@ -3,7 +3,10 @@ extends Node2D
 
 #var Snake_head = preload("res://Snake_head.gd")
 @export var HeadScene: PackedScene
-@export var TailScene: PackedScene
+
+@export var TailScene_01: PackedScene = preload("res://snake/tail_01.tscn")
+@export var TailScene_02: PackedScene = preload("res://snake/tail_02.tscn")
+@export var TailScene_03: PackedScene = preload("res://snake/tail_03.tscn")
 
 @export var WallScene_01: PackedScene = preload("res://walls/wall_01.tscn")
 @export var WallScene_02: PackedScene = preload("res://walls/wall_02.tscn")
@@ -12,8 +15,9 @@ extends Node2D
 @export var FoodScene_01: PackedScene = preload("res://food/red_apple.tscn")
 @export var FoodScene_02: PackedScene = preload("res://food/green_apple.tscn")
 
-
-@export var FloorScene: PackedScene
+@export var FloorScene_01: PackedScene = preload("res://floor/floor_01.tscn")
+@export var FloorScene_02: PackedScene = preload("res://floor/floor_02.tscn")
+@export var FloorScene_03: PackedScene = preload("res://floor/floor_03.tscn")
 
 signal pit_is_destroyed
 
@@ -114,9 +118,19 @@ func choose_wall():
 func draw_floor():
 	for i in range (1, 12):
 		for y in range (1, 20):
-			var floor_tail = FloorScene.instantiate()
+			var floor_tail = choose_floor()
 			floor_tail.set_position(Vector2(i * G.STEP, y * G.STEP))
 			add_child(floor_tail)
+
+
+func choose_floor():
+	var i = randi() % 21
+	if i < 10:
+		return FloorScene_01.instantiate()
+	elif i > 15:
+		return FloorScene_02.instantiate()
+	else:
+		return FloorScene_03.instantiate()
 
 
 func drop_new_food():
@@ -140,12 +154,22 @@ func choose_food():
 
 
 func add_new_tail():
-	var tail = TailScene.instantiate()
+	var tail = choose_tail()
 	tail.set_position(target_position)
 	call_deferred("add_child", tail)
 	tails.append(tail)
 	if G.DEBUG:
 		tail.show_num(tails.size())
+
+
+func choose_tail():
+	var i = randi() % 21
+	if i < 10:
+		return TailScene_01.instantiate()
+	elif i > 15:
+		return TailScene_03.instantiate()
+	else:
+		return TailScene_03.instantiate()
 
 
 func snake_move():
