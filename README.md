@@ -158,6 +158,14 @@ Uploading the first release of the game to the Play Market for internal testing.
 
 #### 22 Часть. Выбор сегментов стены
 Организация случайного выбора сегментов стены.
+[Смотреть на YouTube](https://youtu.be/ZwiWE2KC7EY)
+
+
+#### 23, наверное, самая скучная часть. Случайный выбор методом копипасты.
+Добавляю рандом в выбор элементов еды, плиток пола, и змеиного хвоста методом лютой копипасты.
+
+Eng:
+Implement randomly selecting food, floor, and snake tails using copy-paste methods
 
 
 
