@@ -1,7 +1,8 @@
 res://floor/floor_02.tscn
-res://snake_pit.gd
+res://floor/floor_01.tscn
+res://floor/floor_02.gd
+res://floor/floor_03.gd
 res://floor/floor_03.tscn
-res://gui.tscn
-res://snake/tail_02.tscn
-res://snake/tail_03.tscn
 res://snake_pit.tscn
+res://snake_pit.gd
+res://floor/floor_01.gd

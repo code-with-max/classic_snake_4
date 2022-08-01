@@ -22,7 +22,9 @@ extends Node2D
 signal pit_is_destroyed
 
 var head = null
-var tails = []
+var snake_tails = []
+var floor_tiles = []
+var free_floor_tiles = []
 
 var direction = Vector2.ZERO
 #var direction = Vector2(0, 0)
@@ -121,6 +123,8 @@ func draw_floor():
 			var floor_tail = choose_floor()
 			floor_tail.set_position(Vector2(i * G.STEP, y * G.STEP))
 			add_child(floor_tail)
+	floor_tiles = get_tree().get_nodes_in_group("floor")
+#	print("Total floor tiles: " + str(floor_tiles.size()))
 
 
 func choose_floor():
@@ -133,7 +137,28 @@ func choose_floor():
 		return FloorScene_03.instantiate()
 
 
+func get_free_space():
+	free_floor_tiles = []
+	for floor_tile in floor_tiles:
+		if floor_tile.has_method("is_overlaps"):
+			if not floor_tile.is_overlaps():
+				free_floor_tiles.append(floor_tile)
+	if G.DEBUG:
+		print("Free_tiles: " + str(free_floor_tiles.size()))
+
+
 func drop_new_food():
+	get_free_space()
+	if free_floor_tiles.size() > 1:
+		free_floor_tiles.shuffle()
+		var food = choose_food()
+		food.set_position(free_floor_tiles[0].get_position())
+		call_deferred("add_child", food)
+
+
+func drop_new_food_old():
+	# not using in game
+	# see drop_new_food():
 	var food = choose_food()
 	# get x_pos from 1 to 19 (* 32)
 	var x_pos = (randi() % 11 + 1) * G.STEP
@@ -157,9 +182,9 @@ func add_new_tail():
 	var tail = choose_tail()
 	tail.set_position(target_position)
 	call_deferred("add_child", tail)
-	tails.append(tail)
+	snake_tails.append(tail)
 	if G.DEBUG:
-		tail.show_num(tails.size())
+		tail.show_num(snake_tails.size())
 
 
 func choose_tail():
@@ -175,7 +200,7 @@ func choose_tail():
 func snake_move():
 	target_position = head.get_position()
 	head.set_position(head.get_position() + direction)
-	for tail in tails:
+	for tail in snake_tails:
 		var old_position = tail.get_position()
 		tail.set_position(target_position)
 		target_position = old_position

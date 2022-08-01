@@ -12,11 +12,13 @@ func _ready():
 
 func _on_area_2d_area_entered(area):
 	if area.get_parent().is_in_group("obstacles"):
-		print("collision with obstacles")
+		if G.DEBUG:
+			print("collision with obstacles")
 #		get_parent().on_snake_collision()
 		emit_signal("head_collision")
 		
 	if area.get_parent().is_in_group("food"):
 		area.get_parent().queue_free()
-		print("get some food")
+		if G.DEBUG:
+			print("get some food")
 		emit_signal("get_some_food")
