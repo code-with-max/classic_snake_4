@@ -41,6 +41,7 @@ locale/translations=PackedStringArray("res://translate/translation.en.translatio
 2d_physics/layer_2="walls"
 2d_physics/layer_3="tails"
 2d_physics/layer_4="food"
+2d_physics/layer_5="floor"
 
 [rendering]
 

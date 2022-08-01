@@ -1,3 +1,5 @@
+CollisionShape2D
+Area2D
 TextureRect
 Sprite2D
 ColorRect
@@ -10,6 +12,4 @@ RichTextLabel
 HFlowContainer
 Control
 Node
-CollisionShape2D
-Area2D
 Timer
