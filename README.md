@@ -168,5 +168,12 @@ Eng:
 Implement randomly selecting food, floor, and snake tails using copy-paste methods
 
 
+#### 24 Часть. Новый генератор яблок.
+Теперь яблоки появляются только на пустых плитках пола.
 
+Перед каждой генерацией создается список из актуальный пустых тайлов пола, который из которого случайным образом выбирается одна,куда и помещается экземпляр яблока.
+
+eng:
+A new food generator. 
+Now apples are created only on empty floor tiles.
 
