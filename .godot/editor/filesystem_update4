@@ -1,5 +1,4 @@
-res://snake_pit.tscn
-res://floor/floor_01.tscn
-res://floor/floor_02.tscn
-res://floor/floor_03.tscn
 res://gui.tscn
+res://globals.gd
+res://gui.gd
+res://snake_pit.gd

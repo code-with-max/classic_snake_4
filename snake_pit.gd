@@ -212,6 +212,8 @@ func on_head_collision():
 
 
 func on_get_some_food():
+	G.update_score()
+	get_parent().redraw_score_label()
 	add_new_tail()
 	drop_new_food()
 
