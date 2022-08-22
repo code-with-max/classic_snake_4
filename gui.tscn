@@ -23,6 +23,7 @@ texture = ExtResource("3_tdoyc")
 stretch_mode = 6
 
 [node name="MC_top" type="MarginContainer" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -89.0
@@ -40,13 +41,16 @@ offset_bottom = 40.0
 offset_top = 10.0
 offset_right = 96.0
 offset_bottom = 29.0
+theme_override_font_sizes/font_size = 24
 text = "$SCORE"
 
 [node name="L_score_data" type="Label" parent="MC_top/HBox"]
+unique_name_in_owner = true
 offset_left = 100.0
 offset_top = 10.0
 offset_right = 196.0
 offset_bottom = 29.0
+theme_override_font_sizes/font_size = 24
 text = "$SCORE"
 
 [node name="MC_center" type="MarginContainer" parent="."]
