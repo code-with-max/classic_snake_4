@@ -21,4 +21,5 @@ mono_crash.*.json
 .directory
 *~
 
-
+# Some cache files
+*cache*
