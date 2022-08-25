@@ -2,12 +2,14 @@ extends Node
 
 
 const STEP = 48
-const TIME_STEP = 0.8
+const TIME_STEP = 0.8 # not working
 const DIRECTION_RELATIVE = 3
 const DEBUG = false
 
 
 var game_score = 0
+
+var game_paused = false
 
 
 # Bacause setget not working

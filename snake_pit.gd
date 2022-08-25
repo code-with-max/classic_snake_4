@@ -19,7 +19,7 @@ extends Node2D
 @export var FloorScene_02: PackedScene = preload("res://floor/floor_02.tscn")
 @export var FloorScene_03: PackedScene = preload("res://floor/floor_03.tscn")
 
-signal pit_is_destroyed
+signal pit_need_to_destroyed
 
 var head = null
 var snake_tails = []
@@ -207,8 +207,7 @@ func snake_move():
 	AVAIBLE_TURN = true
 
 func on_head_collision():
-	emit_signal("pit_is_destroyed")
-	queue_free()
+	emit_signal("pit_need_to_destroyed")
 
 
 func on_get_some_food():
@@ -219,4 +218,5 @@ func on_get_some_food():
 
 
 func _on_time_step_timeout():
-	snake_move()
+	if not G.game_paused:
+		snake_move()
