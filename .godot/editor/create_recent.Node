@@ -1,12 +1,13 @@
+Button
+VBoxContainer
+ColorRect
+MarginContainer
+BaseButton
 CollisionShape2D
 Area2D
 TextureRect
 Sprite2D
-ColorRect
 Label
-MarginContainer
-Button
-VBoxContainer
 HBoxContainer
 RichTextLabel
 HFlowContainer
