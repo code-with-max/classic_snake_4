@@ -23,3 +23,6 @@ mono_crash.*.json
 
 # Some cache files
 *cache*
+.godot/editor/filesystem_cache7
+.godot/editor/script_editor_cache.cfg
+.godot/uid_cache.bin
