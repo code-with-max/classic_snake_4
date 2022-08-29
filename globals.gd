@@ -8,8 +8,9 @@ const DEBUG = false
 
 
 var game_score = 0
-
 var game_paused = false
+var game_music = true
+var game_sound = true
 
 
 # Bacause setget not working

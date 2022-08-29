@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dml4fviedjarc"]
+[gd_scene load_steps=6 format=3 uid="uid://dml4fviedjarc"]
 
 [ext_resource type="Script" path="res://gui.gd" id="1_22d8y"]
 [ext_resource type="Theme" uid="uid://b5cjpjxj6fnt7" path="res://main_theme.tres" id="1_oyj60"]
 [ext_resource type="Texture2D" uid="uid://b1ws3248fv7sp" path="res://sprites/sprites_v01/wallpapper_02.jpg" id="3_tdoyc"]
+[ext_resource type="AudioStream" uid="uid://dujrdfowqqfqo" path="res://sound/bu-offensive-birds.mp3" id="4_g1kqb"]
+[ext_resource type="AudioStream" uid="uid://bn0fl6e2cmvmx" path="res://sound/click_sound_1.mp3" id="5_lyrr6"]
 
 [node name="GIU" type="Control"]
 anchor_right = 1.0
@@ -155,6 +157,12 @@ anchor_bottom = 0.5
 
 [node name="Pos2D" type="Position2D" parent="MC_center_pointer"]
 unique_name_in_owner = true
+
+[node name="ASP_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_g1kqb")
+
+[node name="ASP_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_lyrr6")
 
 [connection signal="pressed" from="MC_center/VBox/B_start" to="." method="_on_b_start_pressed"]
 [connection signal="pressed" from="MC_center/VBox/B_settings" to="." method="_on_b_settings_pressed"]

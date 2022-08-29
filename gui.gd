@@ -24,14 +24,19 @@ func redraw_score_label():
 
 
 func _on_b_exit_pressed():
+	if G.game_sound:
+		$ASP_sound.play()
 	get_tree().quit()
 
 
 func _on_b_settings_pressed():
-	pass # Replace with function body.
+	if G.game_sound:
+		$ASP_sound.play()
 
 
 func _on_b_start_pressed():
+	if G.game_sound:
+		$ASP_sound.play()
 	snake_pit = pit_scene.instantiate()
 #	$MC_center.visible = false
 #	$MC_center.set_visible(false)
@@ -48,9 +53,13 @@ func _on_b_start_pressed():
 	snake_pit.set_position(Vector2(start_x, start_y))
 	add_child(snake_pit)
 	snake_pit.pit_need_to_destroyed.connect(on_pit_is_destroyed)
+	if G.game_music:
+		$ASP_music.play()
 
 
 func on_pit_is_destroyed():
+	if G.game_music:
+		$ASP_music.stop()
 	snake_pit.queue_free()
 	$MC_top.hide()
 	$MC_bottom/B_pause.hide()
@@ -59,6 +68,10 @@ func on_pit_is_destroyed():
 
 
 func _on_b_pause_pressed():
+	if G.game_sound:
+		$ASP_sound.play()
+	if G.game_music:
+		$ASP_music.stop()
 	G.game_paused = true
 	snake_pit.hide()
 	$MC_bottom/B_pause.hide()
@@ -66,15 +79,21 @@ func _on_b_pause_pressed():
 
 
 func _on_b_resume_pressed():
+	if G.game_sound:
+		$ASP_sound.play()
 	$MC_pause_menu.hide()
 	$MC_bottom/B_pause.show()
 	snake_pit.show()
 #	yield(get_tree().create_timer(1), "timeout") # For Godot 3.xx
 	await get_tree().create_timer(1).timeout
 	G.game_paused = false
+	if G.game_music:
+		$ASP_music.play()
 
 
 func _on_b_gomenu_pressed():
+	if G.game_sound:
+		$ASP_sound.play()
 	$MC_pause_menu.hide()
 	on_pit_is_destroyed()
 #	G.game_paused = false # Use on button start
