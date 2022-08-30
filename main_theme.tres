@@ -4,3 +4,4 @@
 
 [resource]
 default_font = ExtResource("1_0upic")
+default_font_size = 9

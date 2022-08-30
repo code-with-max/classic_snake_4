@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://dx0e70bcsnq3x" path="res://sound/beep-01.wav" id="3_s3ndv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i0a86"]
-size = Vector2(46, 46)
+size = Vector2(42, 42)
 
 [node name="Snake_head" type="Node2D"]
 script = ExtResource("1_y1hmn")

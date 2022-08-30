@@ -183,6 +183,9 @@ func add_new_tail():
 	tail.set_position(target_position)
 	call_deferred("add_child", tail)
 	snake_tails.append(tail)
+	#
+	if snake_tails.size() == 1:
+		tail.get_node("Area2D/CollisionShape2D").set_disabled(true)
 	if G.DEBUG:
 		tail.show_num(snake_tails.size())
 
@@ -199,10 +202,23 @@ func choose_tail():
 
 func snake_move():
 	target_position = head.get_position()
-	head.set_position(head.get_position() + direction)
+	
+	var new_head_position = head.get_position() + direction
+	if G.smooth_move:
+		var tween = get_tree().create_tween().set_trans(G.transition_type)
+		tween.tween_property(head, "position", new_head_position, G.transition_speed)
+	else:
+		head.set_position(head.get_position() + direction)
+		
 	for tail in snake_tails:
 		var old_position = tail.get_position()
-		tail.set_position(target_position)
+		
+		if G.smooth_move:
+			var tween = get_tree().create_tween().set_trans(G.transition_type)
+			tween.tween_property(tail, "position", target_position, G.transition_speed)
+		else:
+			tail.set_position(target_position)
+			
 		target_position = old_position
 	AVAIBLE_TURN = true
 

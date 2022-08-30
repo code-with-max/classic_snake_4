@@ -32,6 +32,8 @@ func _on_b_exit_pressed():
 func _on_b_settings_pressed():
 	if G.game_sound:
 		$ASP_sound.play()
+	redraw_b_menu_state()
+	$MC_options.show()
 
 
 func _on_b_start_pressed():
@@ -97,9 +99,31 @@ func _on_b_gomenu_pressed():
 	$MC_pause_menu.hide()
 	on_pit_is_destroyed()
 #	G.game_paused = false # Use on button start
-	
-	
-	
-	
-	
-	
+
+
+func _on_b_menu_hide_pressed():
+	$MC_options.hide()
+	G.save_config()
+
+
+func redraw_b_menu_state():
+	%B_music.set_pressed(G.game_music)
+	%B_sound.set_pressed(G.game_sound)
+	%B_smooth.set_pressed(G.smooth_move)
+
+
+func _on_b_music_toggled(_button_pressed):
+	G.game_music = %B_music.is_pressed()
+	if G.game_music:
+		if not $ASP_music.is_playing():
+			$ASP_music.play()
+	else:
+		if $ASP_music.is_playing():
+			$ASP_music.stop()
+
+func _on_b_sound_toggled(_button_pressed):
+	G.game_sound = %B_sound.is_pressed()
+
+
+func _on_b_smooth_toggled(_button_pressed):
+	G.smooth_move = %B_smooth.is_pressed()

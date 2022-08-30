@@ -1,5 +1,7 @@
 res://gui.tscn
+res://main_theme.tres
+res://snake_pit.gd
 res://snake/head.tscn
 res://globals.gd
+res://snake/tail_01.tscn
 res://gui.gd
-res://snake/head.gd
