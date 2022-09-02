@@ -1,9 +1,8 @@
+ColorRect
 AudioStreamPlayer
-Position2D
 MarginContainer
 Button
 VBoxContainer
-ColorRect
 BaseButton
 CollisionShape2D
 Area2D

@@ -1,5 +1,4 @@
-res://gui.tscn
 res://snake/head.tscn
-res://globals.gd
-res://gui.gd
+res://gui.tscn
 res://snake/head.gd
+res://snake_pit.gd

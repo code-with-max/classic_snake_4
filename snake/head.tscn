@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c0t64pvrf1qs8"]
 
-[ext_resource type="Script" path="res://snake/head.gd" id="1_y1hmn"]
+[ext_resource type="Script" path="res://snake/head.gd" id="1_scw30"]
 [ext_resource type="Texture2D" uid="uid://b8amlvc2g3hgm" path="res://snake/head.png" id="2_1i2yb"]
 [ext_resource type="AudioStream" uid="uid://dx0e70bcsnq3x" path="res://sound/beep-01.wav" id="3_s3ndv"]
 
@@ -8,13 +8,12 @@
 size = Vector2(46, 46)
 
 [node name="Snake_head" type="Node2D"]
-script = ExtResource("1_y1hmn")
+script = ExtResource("1_scw30")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
 offset_right = 48.0
 offset_bottom = 48.0
-color = Color(0.0352941, 0.0196078, 1, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.32, 0.32)
