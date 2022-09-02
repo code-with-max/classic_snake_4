@@ -1,9 +1,9 @@
 0b7126e0c6e86d3ec295a72f5aa6e0bd
-::res://::1662110691
+::res://::1662113423
 export_presets.cfg::TextFile::-1::1662110190::0::1::::<><>::
 globals.gd::GDScript::-1::1662109437::0::1::::<>Node<>::
-gui.gd::GDScript::-1::1662109437::0::1::::<>Control<>::
-gui.tscn::PackedScene::8026007167324994620::1662110125::0::1::::<><>::res://gui.gd<>uid://b5cjpjxj6fnt7<>uid://b1ws3248fv7sp<>uid://dujrdfowqqfqo<>uid://bn0fl6e2cmvmx
+gui.gd::GDScript::-1::1662113083::0::1::::<>Control<>::
+gui.tscn::PackedScene::8026007167324994620::1662113308::0::1::::<><>::res://gui.gd<>uid://b5cjpjxj6fnt7<>uid://b1ws3248fv7sp<>uid://dujrdfowqqfqo<>uid://bn0fl6e2cmvmx
 icon.png::CompressedTexture2D::8950919901060644694::1649759373::1658563529::1::::<><>::
 LICENSE.md::TextFile::-1::1661510849::0::1::::<><>::
 main_theme.tres::Theme::4496788496876874066::1662106832::0::1::::<><>::uid://b3fbq8qiqrwtr
@@ -36,10 +36,10 @@ green_apple.tscn::PackedScene::6601072836550814962::1659262089::0::1::::<><>::re
 red_aplle.png::CompressedTexture2D::3276936011772125814::1658570949::1658570949::1::::<><>::
 red_apple.gd::GDScript::-1::1657572347::0::1::::<>Node2D<>::
 red_apple.tscn::PackedScene::2116063364411520267::1659262090::0::1::::<><>::res://food/red_apple.gd<>uid://bmxmwl5ngms3w
-::res://snake/::1662110125
+::res://snake/::1662113267
 head.gd::GDScript::-1::1662110124::0::1::::<>Node2D<>::
 head.png::CompressedTexture2D::4703401878710166292::1657572347::1658563529::1::::<><>::
-head.tscn::PackedScene::6568720471534419653::1662110125::0::1::::<><>::res://snake/head.gd<>uid://b8amlvc2g3hgm<>uid://dx0e70bcsnq3x
+head.tscn::PackedScene::6568720471534419653::1662113267::0::1::::<><>::res://snake/head.gd<>uid://b8amlvc2g3hgm<>uid://dx0e70bcsnq3x
 tail_01.gd::GDScript::-1::1657572347::0::1::::<>Node2D<>::
 tail_01.png::CompressedTexture2D::67833386504395689::1657572347::1658563529::1::::<><>::
 tail_01.tscn::PackedScene::6233941046652388350::1661869914::0::1::::<><>::res://snake/tail_01.gd<>uid://74hadivypxp
