@@ -1,4 +1,3 @@
-res://snake/head.tscn
 res://gui.tscn
-res://snake/head.gd
-res://snake_pit.gd
+res://snake/head.tscn
+res://gui.gd

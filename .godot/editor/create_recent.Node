@@ -1,8 +1,9 @@
-ColorRect
-AudioStreamPlayer
-MarginContainer
 Button
+CheckButton
 VBoxContainer
+ColorRect
+MarginContainer
+AudioStreamPlayer
 BaseButton
 CollisionShape2D
 Area2D
