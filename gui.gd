@@ -121,6 +121,7 @@ func _on_b_menu_hide_pressed():
 	if G.game_sound:
 		$ASP_sound.play()
 	$MC_settings.hide()
+	G.save_config()
 
 
 func _on_b_music_pressed():

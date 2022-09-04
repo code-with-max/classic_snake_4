@@ -51,7 +51,7 @@ metadata/_edit_layout_mode = 1
 
 [node name="HBox" type="HBoxContainer" parent="MC_top"]
 layout_mode = 2
-offset_right = 292.0
+offset_right = 196.0
 offset_bottom = 40.0
 alignment = 1
 
@@ -164,10 +164,10 @@ color = Color(0, 0, 0, 0.501961)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MC_pause_menu"]
 layout_mode = 2
-offset_left = 167.0
-offset_top = 525.0
-offset_right = 553.0
-offset_bottom = 755.0
+offset_left = 236.0
+offset_top = 500.0
+offset_right = 484.0
+offset_bottom = 779.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 40
@@ -227,10 +227,10 @@ color = Color(0.0941176, 0.0941176, 0.188235, 1)
 
 [node name="VBox" type="VBoxContainer" parent="MC_settings"]
 layout_mode = 2
-offset_left = 116.0
-offset_top = 517.0
-offset_right = 604.0
-offset_bottom = 763.0
+offset_left = 203.0
+offset_top = 489.0
+offset_right = 517.0
+offset_bottom = 791.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 40
@@ -241,6 +241,8 @@ unique_name_in_owner = true
 layout_mode = 2
 offset_right = 488.0
 offset_bottom = 56.0
+focus_next = NodePath("../B_sound")
+focus_previous = NodePath("../B_menu_hide")
 theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
 theme_override_font_sizes/font_size = 48
 toggle_mode = true
@@ -252,6 +254,8 @@ layout_mode = 2
 offset_top = 96.0
 offset_right = 488.0
 offset_bottom = 150.0
+focus_next = NodePath("../B_menu_hide")
+focus_previous = NodePath("../B_music")
 theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
 theme_override_font_sizes/font_size = 46
 toggle_mode = true
@@ -262,6 +266,8 @@ layout_mode = 2
 offset_top = 190.0
 offset_right = 488.0
 offset_bottom = 246.0
+focus_next = NodePath("../B_music")
+focus_previous = NodePath("../B_sound")
 theme_override_font_sizes/font_size = 48
 text = "$MENU_HIDE"
 
