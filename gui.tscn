@@ -1,29 +1,45 @@
-[gd_scene load_steps=4 format=3 uid="uid://dml4fviedjarc"]
+[gd_scene load_steps=6 format=3 uid="uid://dml4fviedjarc"]
 
 [ext_resource type="Script" path="res://gui.gd" id="1_22d8y"]
 [ext_resource type="Theme" uid="uid://b5cjpjxj6fnt7" path="res://main_theme.tres" id="1_oyj60"]
 [ext_resource type="Texture2D" uid="uid://b1ws3248fv7sp" path="res://sprites/sprites_v01/wallpapper_02.jpg" id="3_tdoyc"]
+[ext_resource type="AudioStream" uid="uid://dujrdfowqqfqo" path="res://sound/bu-offensive-birds.mp3" id="4_g1kqb"]
+[ext_resource type="AudioStream" uid="uid://bn0fl6e2cmvmx" path="res://sound/click_sound_1.mp3" id="5_lyrr6"]
 
 [node name="GIU" type="Control"]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("1_oyj60")
 script = ExtResource("1_22d8y")
 
 [node name="CR_backgroung" type="ColorRect" parent="."]
 visible = false
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.360784, 0.360784, 0.360784, 1)
 
 [node name="Texture_backgroung" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("3_tdoyc")
 stretch_mode = 6
 
 [node name="MC_top" type="MarginContainer" parent="."]
 visible = false
+layout_mode = 1
+anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -89.0
@@ -34,11 +50,13 @@ grow_horizontal = 2
 metadata/_edit_layout_mode = 1
 
 [node name="HBox" type="HBoxContainer" parent="MC_top"]
-offset_right = 292.0
+layout_mode = 2
+offset_right = 196.0
 offset_bottom = 40.0
 alignment = 1
 
 [node name="L_score_text" type="Label" parent="MC_top/HBox"]
+layout_mode = 2
 offset_top = 10.0
 offset_right = 96.0
 offset_bottom = 29.0
@@ -47,6 +65,7 @@ text = "$SCORE"
 
 [node name="L_score_data" type="Label" parent="MC_top/HBox"]
 unique_name_in_owner = true
+layout_mode = 2
 offset_left = 100.0
 offset_top = 10.0
 offset_right = 196.0
@@ -55,6 +74,8 @@ theme_override_font_sizes/font_size = 24
 text = "$SCORE"
 
 [node name="MC_center" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -63,32 +84,42 @@ offset_left = -193.0
 offset_top = -85.0
 offset_right = 193.0
 offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBox" type="VBoxContainer" parent="MC_center"]
+layout_mode = 2
 offset_right = 386.0
-offset_bottom = 170.0
+offset_bottom = 242.0
+theme_override_constants/separation = 40
+alignment = 1
 
 [node name="B_start" type="Button" parent="MC_center/VBox"]
+layout_mode = 2
 offset_right = 386.0
 offset_bottom = 56.0
 theme_override_font_sizes/font_size = 48
 text = "$START"
 
 [node name="B_settings" type="Button" parent="MC_center/VBox"]
-offset_top = 60.0
+layout_mode = 2
+offset_top = 96.0
 offset_right = 386.0
-offset_bottom = 110.0
+offset_bottom = 146.0
 theme_override_font_sizes/font_size = 42
 text = "$SETTINGS"
 
 [node name="B_exit" type="Button" parent="MC_center/VBox"]
-offset_top = 114.0
+layout_mode = 2
+offset_top = 186.0
 offset_right = 386.0
-offset_bottom = 170.0
+offset_bottom = 242.0
 theme_override_font_sizes/font_size = 48
 text = "$EXIT"
 
 [node name="MC_bottom" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -102,6 +133,7 @@ grow_vertical = 0
 metadata/_edit_use_custom_anchors = true
 
 [node name="L_info" type="Label" parent="MC_bottom"]
+layout_mode = 2
 offset_right = 184.0
 offset_bottom = 19.0
 text = "$INFO"
@@ -109,6 +141,7 @@ horizontal_alignment = 1
 
 [node name="B_pause" type="Button" parent="MC_bottom"]
 visible = false
+layout_mode = 2
 offset_right = 184.0
 offset_bottom = 19.0
 theme_override_font_sizes/font_size = 32
@@ -116,30 +149,47 @@ text = "$PAUSE_GAME"
 
 [node name="MC_pause_menu" type="MarginContainer" parent="."]
 visible = false
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="MC_pause_menu"]
+layout_mode = 2
 offset_right = 720.0
 offset_bottom = 1280.0
 color = Color(0, 0, 0, 0.501961)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MC_pause_menu"]
-offset_left = 176.0
-offset_top = 588.0
-offset_right = 544.0
-offset_bottom = 692.0
+layout_mode = 2
+offset_left = 236.0
+offset_top = 500.0
+offset_right = 484.0
+offset_bottom = 779.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_constants/separation = 40
 alignment = 1
 
 [node name="B_resume" type="Button" parent="MC_pause_menu/VBoxContainer"]
+layout_mode = 2
 offset_right = 368.0
 offset_bottom = 56.0
 theme_override_font_sizes/font_size = 48
 text = "$RESUME"
 
+[node name="B_settings" type="Button" parent="MC_pause_menu/VBoxContainer"]
+layout_mode = 2
+offset_top = 60.0
+offset_right = 386.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 42
+text = "$SETTINGS"
+
 [node name="B_gomenu" type="Button" parent="MC_pause_menu/VBoxContainer"]
+layout_mode = 2
 offset_top = 60.0
 offset_right = 368.0
 offset_bottom = 104.0
@@ -148,17 +198,92 @@ text = "$MAIN_MENU"
 
 [node name="MC_center_pointer" type="MarginContainer" parent="."]
 visible = false
+layout_mode = 1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Pos2D" type="Position2D" parent="MC_center_pointer"]
+[node name="Pos2D" type="Marker2D" parent="MC_center_pointer"]
 unique_name_in_owner = true
+
+[node name="MC_settings" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MC_settings"]
+layout_mode = 2
+offset_right = 720.0
+offset_bottom = 1280.0
+color = Color(0.0941176, 0.0941176, 0.188235, 1)
+
+[node name="VBox" type="VBoxContainer" parent="MC_settings"]
+layout_mode = 2
+offset_left = 203.0
+offset_top = 489.0
+offset_right = 517.0
+offset_bottom = 791.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="B_music" type="Button" parent="MC_settings/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_right = 488.0
+offset_bottom = 56.0
+focus_next = NodePath("../B_sound")
+focus_previous = NodePath("../B_menu_hide")
+theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
+theme_override_font_sizes/font_size = 48
+toggle_mode = true
+text = "$MUSIC"
+
+[node name="B_sound" type="Button" parent="MC_settings/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_top = 96.0
+offset_right = 488.0
+offset_bottom = 150.0
+focus_next = NodePath("../B_menu_hide")
+focus_previous = NodePath("../B_music")
+theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
+theme_override_font_sizes/font_size = 46
+toggle_mode = true
+text = "$SOUND"
+
+[node name="B_menu_hide" type="Button" parent="MC_settings/VBox"]
+layout_mode = 2
+offset_top = 190.0
+offset_right = 488.0
+offset_bottom = 246.0
+focus_next = NodePath("../B_music")
+focus_previous = NodePath("../B_sound")
+theme_override_font_sizes/font_size = 48
+text = "$MENU_HIDE"
+
+[node name="ASP_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_g1kqb")
+
+[node name="ASP_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_lyrr6")
 
 [connection signal="pressed" from="MC_center/VBox/B_start" to="." method="_on_b_start_pressed"]
 [connection signal="pressed" from="MC_center/VBox/B_settings" to="." method="_on_b_settings_pressed"]
 [connection signal="pressed" from="MC_center/VBox/B_exit" to="." method="_on_b_exit_pressed"]
 [connection signal="pressed" from="MC_bottom/B_pause" to="." method="_on_b_pause_pressed"]
 [connection signal="pressed" from="MC_pause_menu/VBoxContainer/B_resume" to="." method="_on_b_resume_pressed"]
+[connection signal="pressed" from="MC_pause_menu/VBoxContainer/B_settings" to="." method="_on_b_settings_pressed"]
 [connection signal="pressed" from="MC_pause_menu/VBoxContainer/B_gomenu" to="." method="_on_b_gomenu_pressed"]
+[connection signal="pressed" from="MC_settings/VBox/B_music" to="." method="_on_b_music_pressed"]
+[connection signal="pressed" from="MC_settings/VBox/B_sound" to="." method="_on_b_sound_pressed"]
+[connection signal="pressed" from="MC_settings/VBox/B_menu_hide" to="." method="_on_b_menu_hide_pressed"]
