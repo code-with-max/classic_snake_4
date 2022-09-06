@@ -10,9 +10,8 @@ size = Vector2(46, 46)
 script = ExtResource("1_dwq5x")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-offset_right = 48.0
-offset_bottom = 48.0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_jbp12")

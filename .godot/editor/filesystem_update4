@@ -1,3 +1,2 @@
 res://gui.tscn
-res://globals.gd
-res://gui.gd
+res://floor/floor_02.tscn

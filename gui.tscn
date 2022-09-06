@@ -18,7 +18,6 @@ script = ExtResource("1_22d8y")
 
 [node name="CR_backgroung" type="ColorRect" parent="."]
 visible = false
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -27,7 +26,6 @@ grow_vertical = 2
 color = Color(0.360784, 0.360784, 0.360784, 1)
 
 [node name="Texture_backgroung" type="TextureRect" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -38,7 +36,6 @@ stretch_mode = 6
 
 [node name="MC_top" type="MarginContainer" parent="."]
 visible = false
-layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -50,13 +47,11 @@ grow_horizontal = 2
 metadata/_edit_layout_mode = 1
 
 [node name="HBox" type="HBoxContainer" parent="MC_top"]
-layout_mode = 2
-offset_right = 196.0
+offset_right = 292.0
 offset_bottom = 40.0
 alignment = 1
 
 [node name="L_score_text" type="Label" parent="MC_top/HBox"]
-layout_mode = 2
 offset_top = 10.0
 offset_right = 96.0
 offset_bottom = 29.0
@@ -65,7 +60,6 @@ text = "$SCORE"
 
 [node name="L_score_data" type="Label" parent="MC_top/HBox"]
 unique_name_in_owner = true
-layout_mode = 2
 offset_left = 100.0
 offset_top = 10.0
 offset_right = 196.0
@@ -74,7 +68,6 @@ theme_override_font_sizes/font_size = 24
 text = "$SCORE"
 
 [node name="MC_center" type="MarginContainer" parent="."]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -88,21 +81,18 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBox" type="VBoxContainer" parent="MC_center"]
-layout_mode = 2
 offset_right = 386.0
 offset_bottom = 242.0
 theme_override_constants/separation = 40
 alignment = 1
 
 [node name="B_start" type="Button" parent="MC_center/VBox"]
-layout_mode = 2
 offset_right = 386.0
 offset_bottom = 56.0
 theme_override_font_sizes/font_size = 48
 text = "$START"
 
 [node name="B_settings" type="Button" parent="MC_center/VBox"]
-layout_mode = 2
 offset_top = 96.0
 offset_right = 386.0
 offset_bottom = 146.0
@@ -110,7 +100,6 @@ theme_override_font_sizes/font_size = 42
 text = "$SETTINGS"
 
 [node name="B_exit" type="Button" parent="MC_center/VBox"]
-layout_mode = 2
 offset_top = 186.0
 offset_right = 386.0
 offset_bottom = 242.0
@@ -118,7 +107,6 @@ theme_override_font_sizes/font_size = 48
 text = "$EXIT"
 
 [node name="MC_bottom" type="MarginContainer" parent="."]
-layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -133,7 +121,6 @@ grow_vertical = 0
 metadata/_edit_use_custom_anchors = true
 
 [node name="L_info" type="Label" parent="MC_bottom"]
-layout_mode = 2
 offset_right = 184.0
 offset_bottom = 19.0
 text = "$INFO"
@@ -141,7 +128,6 @@ horizontal_alignment = 1
 
 [node name="B_pause" type="Button" parent="MC_bottom"]
 visible = false
-layout_mode = 2
 offset_right = 184.0
 offset_bottom = 19.0
 theme_override_font_sizes/font_size = 32
@@ -149,7 +135,6 @@ text = "$PAUSE_GAME"
 
 [node name="MC_pause_menu" type="MarginContainer" parent="."]
 visible = false
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -157,31 +142,27 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="MC_pause_menu"]
-layout_mode = 2
 offset_right = 720.0
 offset_bottom = 1280.0
 color = Color(0, 0, 0, 0.501961)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MC_pause_menu"]
-layout_mode = 2
-offset_left = 236.0
-offset_top = 500.0
-offset_right = 484.0
-offset_bottom = 779.0
+offset_left = 167.0
+offset_top = 525.0
+offset_right = 553.0
+offset_bottom = 755.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 40
 alignment = 1
 
 [node name="B_resume" type="Button" parent="MC_pause_menu/VBoxContainer"]
-layout_mode = 2
 offset_right = 368.0
 offset_bottom = 56.0
 theme_override_font_sizes/font_size = 48
 text = "$RESUME"
 
 [node name="B_settings" type="Button" parent="MC_pause_menu/VBoxContainer"]
-layout_mode = 2
 offset_top = 60.0
 offset_right = 386.0
 offset_bottom = 110.0
@@ -189,7 +170,6 @@ theme_override_font_sizes/font_size = 42
 text = "$SETTINGS"
 
 [node name="B_gomenu" type="Button" parent="MC_pause_menu/VBoxContainer"]
-layout_mode = 2
 offset_top = 60.0
 offset_right = 368.0
 offset_bottom = 104.0
@@ -198,7 +178,6 @@ text = "$MAIN_MENU"
 
 [node name="MC_center_pointer" type="MarginContainer" parent="."]
 visible = false
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -212,7 +191,6 @@ unique_name_in_owner = true
 
 [node name="MC_settings" type="MarginContainer" parent="."]
 visible = false
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -220,17 +198,15 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="MC_settings"]
-layout_mode = 2
 offset_right = 720.0
 offset_bottom = 1280.0
 color = Color(0.0941176, 0.0941176, 0.188235, 1)
 
 [node name="VBox" type="VBoxContainer" parent="MC_settings"]
-layout_mode = 2
-offset_left = 203.0
-offset_top = 489.0
-offset_right = 517.0
-offset_bottom = 791.0
+offset_left = 116.0
+offset_top = 517.0
+offset_right = 604.0
+offset_bottom = 763.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 40
@@ -238,7 +214,6 @@ alignment = 1
 
 [node name="B_music" type="Button" parent="MC_settings/VBox"]
 unique_name_in_owner = true
-layout_mode = 2
 offset_right = 488.0
 offset_bottom = 56.0
 focus_next = NodePath("../B_sound")
@@ -250,7 +225,6 @@ text = "$MUSIC"
 
 [node name="B_sound" type="Button" parent="MC_settings/VBox"]
 unique_name_in_owner = true
-layout_mode = 2
 offset_top = 96.0
 offset_right = 488.0
 offset_bottom = 150.0
@@ -262,7 +236,6 @@ toggle_mode = true
 text = "$SOUND"
 
 [node name="B_menu_hide" type="Button" parent="MC_settings/VBox"]
-layout_mode = 2
 offset_top = 190.0
 offset_right = 488.0
 offset_bottom = 246.0
