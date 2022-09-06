@@ -51,9 +51,10 @@ func _on_b_start_pressed():
 	$MC_bottom/L_info.hide()
 	$MC_top.show()
 	$MC_bottom/B_pause.show()
-	var start_x = %Pos2D.get_global_position().x - 312
-	var start_y = %Pos2D.get_global_position().y - 480
-	snake_pit.set_position(Vector2(start_x, start_y))
+#	var start_x = %Pos2D.get_global_position().x - 312
+#	var start_y = %Pos2D.get_global_position().y - 480
+#	snake_pit.set_position(Vector2(start_x, start_y))
+	snake_pit.set_position(Vector2(48, 96))
 	add_child(snake_pit)
 	snake_pit.pit_need_to_destroyed.connect(on_pit_is_destroyed)
 	# Play music
@@ -136,3 +137,7 @@ func _on_b_sound_pressed():
 	if G.game_sound:
 		$ASP_sound.play()
 	G.game_sound = %B_sound.is_pressed()
+
+
+func _on_b_about_pressed():
+	$MC_about_game.show()
