@@ -16,3 +16,11 @@ func _on_link_music_pressed():
 
 func _on_b_close_pressed():
 	hide()
+
+
+func _on_link_license_pressed():
+	OS.shell_open("https://github.com/trash-max/classic_snake_4/blob/master/LICENSE.md")
+
+
+func _on_link_privacy_pressed():
+	OS.shell_open("https://github.com/trash-max/classic_snake_4/blob/master/PRIVACY_POLICY.md")
