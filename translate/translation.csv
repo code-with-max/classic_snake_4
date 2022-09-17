@@ -2,8 +2,18 @@ Keys,en,ru
 $START,START,СТАРТ
 $SETTINGS,SETTINGS,НАСТРОЙКИ
 $EXIT,EXIT,ВЫХОД
-$INFO,INFO,ОБ ИГРЕ
+$INFO,INFO,ИНФО
 $SCORE,SCORE,СЧЕТ
 $RESUME,RESUME,ПРОДОЛЖИТЬ
 $MAIN_MENU,MAIN MENU,ГЛАВНОЕ МЕНЮ
 $PAUSE_GAME,PAUSE,ПАУЗА
+$ABOUT_GAME,ABOUT GAME,ОБ ИГРЕ
+$LINK_TO_GODOT,Godot Game Engine,Игровой движок Godot
+$LINK_TO_GITHUB,Contribute to GitHub,Игра на GitHub
+$LINK_TO_MUSIC,Used music,Используемая музыка
+$CLOSE_ABOUT,CLOSE,НАЗАД
+$LICENSE,LICENSE,Лицензия
+$PRIVACY_POLICY,PRIVACY POLICY,Еще формальностей
+$MUSIC,MUSIC,МУЗЫКА
+$SOUND,SOUND FX,ЗВУКИ
+$MENU_HIDE,CLOSE,ЗАКРЫТЬ

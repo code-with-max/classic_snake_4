@@ -1,7 +1,7 @@
 extends Control
 
 
-@export var pit_scene: PackedScene = preload("res://snake_pit.tscn")
+@export var pit_scene: PackedScene
 
 
 var snake_pit
@@ -43,14 +43,14 @@ func _on_b_start_pressed():
 	# Play "click"
 	if G.game_sound:
 		$ASP_sound.play()
+	$MC_center.hide()
+	$MC_top.show()
+	$MC_bottom/B_pause.show()
+	$MC_bottom/B_about.hide()
 	snake_pit = pit_scene.instantiate()
 	G.reset_score()
 	G.game_paused = false
 	redraw_score_label()
-	$MC_center.hide()
-	$MC_bottom/L_info.hide()
-	$MC_top.show()
-	$MC_bottom/B_pause.show()
 #	var start_x = %Pos2D.get_global_position().x - 312
 #	var start_y = %Pos2D.get_global_position().y - 480
 #	snake_pit.set_position(Vector2(start_x, start_y))
@@ -69,7 +69,7 @@ func on_pit_is_destroyed():
 	$MC_top.hide()
 	$MC_bottom/B_pause.hide()
 	$MC_center.show()
-	$MC_bottom/L_info.show()
+	$MC_bottom/B_about.show()
 
 
 # Call pause menu

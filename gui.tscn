@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dml4fviedjarc"]
+[gd_scene load_steps=8 format=3 uid="uid://dml4fviedjarc"]
 
 [ext_resource type="Script" path="res://gui.gd" id="1_22d8y"]
 [ext_resource type="Theme" uid="uid://b5cjpjxj6fnt7" path="res://main_theme.tres" id="1_oyj60"]
-[ext_resource type="Texture2D" uid="uid://b1ws3248fv7sp" path="res://sprites/sprites_v01/wallpapper_02.jpg" id="3_tdoyc"]
+[ext_resource type="PackedScene" uid="uid://vvrbnfokwc4g" path="res://snake_pit.tscn" id="3_1j4s4"]
 [ext_resource type="AudioStream" uid="uid://dujrdfowqqfqo" path="res://sound/bu-offensive-birds.mp3" id="4_g1kqb"]
 [ext_resource type="Script" path="res://MC_about_game.gd" id="4_s55ol"]
+[ext_resource type="Texture2D" uid="uid://djxcey5bt6is" path="res://sprites/sprites_v01/background_01.png" id="4_swdsq"]
 [ext_resource type="AudioStream" uid="uid://bn0fl6e2cmvmx" path="res://sound/click_sound_1.mp3" id="5_lyrr6"]
 
 [node name="GIU" type="Control"]
@@ -16,6 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_oyj60")
 script = ExtResource("1_22d8y")
+pit_scene = ExtResource("3_1j4s4")
 
 [node name="CR_backgroung" type="ColorRect" parent="."]
 visible = false
@@ -34,7 +36,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_tdoyc")
+texture = ExtResource("4_swdsq")
 stretch_mode = 6
 
 [node name="MC_top" type="MarginContainer" parent="."]
@@ -76,22 +78,26 @@ text = "$SCORE"
 
 [node name="MC_center" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -193.0
-offset_top = -85.0
-offset_right = 193.0
-offset_bottom = 85.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="ColorRect" type="ColorRect" parent="MC_center"]
+layout_mode = 2
+offset_right = 720.0
+offset_bottom = 1280.0
+color = Color(0, 0, 0, 0.25098)
+
 [node name="VBox" type="VBoxContainer" parent="MC_center"]
 layout_mode = 2
-offset_right = 386.0
-offset_bottom = 242.0
+offset_left = 167.0
+offset_top = 519.0
+offset_right = 553.0
+offset_bottom = 761.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_constants/separation = 40
 alignment = 1
 
@@ -116,6 +122,8 @@ offset_top = 186.0
 offset_right = 386.0
 offset_bottom = 242.0
 theme_override_font_sizes/font_size = 48
+shortcut_in_tooltip = false
+action_mode = 0
 text = "$EXIT"
 
 [node name="MC_bottom" type="MarginContainer" parent="."]
@@ -273,7 +281,7 @@ text = "$MENU_HIDE"
 
 [node name="MC_about_game" type="MarginContainer" parent="."]
 visible = false
-custom_minimum_size = Vector2(400, 500)
+custom_minimum_size = Vector2i(400, 500)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -297,9 +305,9 @@ color = Color(0, 0.0156863, 0.180392, 1)
 [node name="VBox" type="VBoxContainer" parent="MC_about_game"]
 layout_mode = 2
 offset_left = 52.0
-offset_top = 98.0
+offset_top = 30.0
 offset_right = 348.0
-offset_bottom = 402.0
+offset_bottom = 470.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 50
@@ -337,11 +345,27 @@ offset_bottom = 222.0
 theme_override_font_sizes/font_size = 18
 text = "$LINK_TO_MUSIC"
 
-[node name="B_close" type="Button" parent="MC_about_game/VBox"]
+[node name="LinkLicense" type="LinkButton" parent="MC_about_game/VBox"]
 layout_mode = 2
 offset_top = 272.0
 offset_right = 296.0
-offset_bottom = 304.0
+offset_bottom = 290.0
+theme_override_font_sizes/font_size = 18
+text = "$LICENSE"
+
+[node name="LinkPrivacy" type="LinkButton" parent="MC_about_game/VBox"]
+layout_mode = 2
+offset_top = 340.0
+offset_right = 296.0
+offset_bottom = 358.0
+theme_override_font_sizes/font_size = 18
+text = "$PRIVACY_POLICY"
+
+[node name="B_close" type="Button" parent="MC_about_game/VBox"]
+layout_mode = 2
+offset_top = 408.0
+offset_right = 296.0
+offset_bottom = 440.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 24
@@ -367,4 +391,6 @@ stream = ExtResource("5_lyrr6")
 [connection signal="pressed" from="MC_about_game/VBox/LinkGodot" to="MC_about_game" method="_on_link_godot_pressed"]
 [connection signal="pressed" from="MC_about_game/VBox/LinkGitHub" to="MC_about_game" method="_on_link_git_hub_pressed"]
 [connection signal="pressed" from="MC_about_game/VBox/LinkMusic" to="MC_about_game" method="_on_link_music_pressed"]
+[connection signal="pressed" from="MC_about_game/VBox/LinkLicense" to="MC_about_game" method="_on_link_license_pressed"]
+[connection signal="pressed" from="MC_about_game/VBox/LinkPrivacy" to="MC_about_game" method="_on_link_privacy_pressed"]
 [connection signal="pressed" from="MC_about_game/VBox/B_close" to="MC_about_game" method="_on_b_close_pressed"]

@@ -1,7 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://vvrbnfokwc4g"]
+[gd_scene load_steps=15 format=3 uid="uid://vvrbnfokwc4g"]
 
 [ext_resource type="Script" path="res://snake_pit.gd" id="1_vi1c5"]
 [ext_resource type="PackedScene" uid="uid://c0t64pvrf1qs8" path="res://snake/head.tscn" id="2_f8883"]
+[ext_resource type="PackedScene" uid="uid://cu21dltstxmok" path="res://snake/tail_01.tscn" id="3_t3sxj"]
+[ext_resource type="PackedScene" uid="uid://dp3wpph5yhxdv" path="res://snake/tail_02.tscn" id="4_j8qlt"]
+[ext_resource type="PackedScene" uid="uid://cjeyt4pxuytxm" path="res://snake/tail_03.tscn" id="5_tc0bn"]
+[ext_resource type="PackedScene" uid="uid://boyubseky6ga2" path="res://walls/wall_01.tscn" id="6_wg50o"]
+[ext_resource type="PackedScene" uid="uid://c1c7xr4h0x6iv" path="res://walls/wall_02.tscn" id="7_tjaxj"]
+[ext_resource type="PackedScene" uid="uid://budw215vvl1v1" path="res://walls/wall_03.tscn" id="8_1alxp"]
+[ext_resource type="PackedScene" uid="uid://c1bux8g0xoofq" path="res://food/green_apple.tscn" id="9_02v1p"]
+[ext_resource type="PackedScene" uid="uid://5fbiwe7ha5xv" path="res://food/red_apple.tscn" id="10_d1cao"]
+[ext_resource type="PackedScene" uid="uid://cw1qtyxe7wuot" path="res://floor/floor_01.tscn" id="11_i2cwc"]
+[ext_resource type="PackedScene" uid="uid://dyjlr00w23cir" path="res://floor/floor_02.tscn" id="12_exk8m"]
+[ext_resource type="PackedScene" uid="uid://dlr01nge03bg5" path="res://floor/floor_03.tscn" id="13_cbjei"]
 
 [sub_resource type="Theme" id="Theme_7b3uf"]
 default_font_size = 48
@@ -9,9 +20,22 @@ default_font_size = 48
 [node name="Snake_pit" type="Node2D"]
 script = ExtResource("1_vi1c5")
 HeadScene = ExtResource("2_f8883")
+TailScene_01 = ExtResource("3_t3sxj")
+TailScene_02 = ExtResource("4_j8qlt")
+TailScene_03 = ExtResource("5_tc0bn")
+WallScene_01 = ExtResource("6_wg50o")
+WallScene_02 = ExtResource("7_tjaxj")
+WallScene_03 = ExtResource("8_1alxp")
+FoodScene_01 = ExtResource("9_02v1p")
+FoodScene_02 = ExtResource("10_d1cao")
+FloorScene_01 = ExtResource("11_i2cwc")
+FloorScene_02 = ExtResource("12_exk8m")
+FloorScene_03 = ExtResource("13_cbjei")
 
 [node name="Debug_labels" type="Control" parent="."]
 visible = false
+layout_mode = 3
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme = SubResource("Theme_7b3uf")

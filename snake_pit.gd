@@ -4,20 +4,20 @@ extends Node2D
 #var Snake_head = preload("res://Snake_head.gd")
 @export var HeadScene: PackedScene
 
-@export var TailScene_01: PackedScene = preload("res://snake/tail_01.tscn")
-@export var TailScene_02: PackedScene = preload("res://snake/tail_02.tscn")
-@export var TailScene_03: PackedScene = preload("res://snake/tail_03.tscn")
+@export var TailScene_01: PackedScene
+@export var TailScene_02: PackedScene
+@export var TailScene_03: PackedScene
 
-@export var WallScene_01: PackedScene = preload("res://walls/wall_01.tscn")
-@export var WallScene_02: PackedScene = preload("res://walls/wall_02.tscn")
-@export var WallScene_03: PackedScene = preload("res://walls/wall_03.tscn")
+@export var WallScene_01: PackedScene
+@export var WallScene_02: PackedScene
+@export var WallScene_03: PackedScene
 
-@export var FoodScene_01: PackedScene = preload("res://food/red_apple.tscn")
-@export var FoodScene_02: PackedScene = preload("res://food/green_apple.tscn")
+@export var FoodScene_01: PackedScene
+@export var FoodScene_02: PackedScene
 
-@export var FloorScene_01: PackedScene = preload("res://floor/floor_01.tscn")
-@export var FloorScene_02: PackedScene = preload("res://floor/floor_02.tscn")
-@export var FloorScene_03: PackedScene = preload("res://floor/floor_03.tscn")
+@export var FloorScene_01: PackedScene
+@export var FloorScene_02: PackedScene
+@export var FloorScene_03: PackedScene
 
 signal pit_need_to_destroyed
 
