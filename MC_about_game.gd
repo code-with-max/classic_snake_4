@@ -24,3 +24,7 @@ func _on_link_license_pressed():
 
 func _on_link_privacy_pressed():
 	OS.shell_open("https://github.com/trash-max/classic_snake_4/blob/master/PRIVACY_POLICY.md")
+
+
+func _on_link_you_tube_pressed():
+	OS.shell_open("https://youtube.com/playlist?list=PLJn3nbk2RjwTy6ARA4ZfKOphTGhD8gwHb")

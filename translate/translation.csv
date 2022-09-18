@@ -1,19 +1,22 @@
 Keys,en,ru
+$GAME_NAME,SNAKE,ЗМЕЙКА
+$SLIDE_TO_TURN,slide to turn,используй свайп для поворота
 $START,START,СТАРТ
 $SETTINGS,SETTINGS,НАСТРОЙКИ
+$MUSIC,MUSIC,МУЗЫКА
+$SOUND,SOUND FX,ЗВУКИ
+$MENU_HIDE,CLOSE,ЗАКРЫТЬ
 $EXIT,EXIT,ВЫХОД
 $INFO,INFO,ИНФО
 $SCORE,SCORE,СЧЕТ
 $RESUME,RESUME,ПРОДОЛЖИТЬ
 $MAIN_MENU,MAIN MENU,ГЛАВНОЕ МЕНЮ
 $PAUSE_GAME,PAUSE,ПАУЗА
-$ABOUT_GAME,ABOUT GAME,ОБ ИГРЕ
+$EXTERNAL_LINKS,EXTERNAL LINKS,Внешние ресурсы
 $LINK_TO_GODOT,Godot Game Engine,Игровой движок Godot
-$LINK_TO_GITHUB,Contribute to GitHub,Игра на GitHub
+$LINK_TO_GITHUB,Contribute to GitHub,Страница на GitHub
 $LINK_TO_MUSIC,Used music,Используемая музыка
-$CLOSE_ABOUT,CLOSE,НАЗАД
 $LICENSE,LICENSE,Лицензия
 $PRIVACY_POLICY,PRIVACY POLICY,Еще формальностей
-$MUSIC,MUSIC,МУЗЫКА
-$SOUND,SOUND FX,ЗВУКИ
-$MENU_HIDE,CLOSE,ЗАКРЫТЬ
+$LINK_TO_YOUTUBE,YouTube DEVLOG,Плейлист YouTube
+$CLOSE_ABOUT,CLOSE,НАЗАД

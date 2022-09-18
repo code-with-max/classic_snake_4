@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://dml4fviedjarc"]
 
 [ext_resource type="Script" path="res://gui.gd" id="1_22d8y"]
-[ext_resource type="Theme" uid="uid://b5cjpjxj6fnt7" path="res://main_theme.tres" id="1_oyj60"]
+[ext_resource type="Theme" uid="uid://bdracemkdlddj" path="res://main_theme.tres" id="1_oyj60"]
 [ext_resource type="PackedScene" uid="uid://vvrbnfokwc4g" path="res://snake_pit.tscn" id="3_1j4s4"]
+[ext_resource type="Texture2D" uid="uid://cje7621wxovm3" path="res://sprites/sprites_v01/background_02.png" id="4_bxnkt"]
 [ext_resource type="AudioStream" uid="uid://dujrdfowqqfqo" path="res://sound/bu-offensive-birds.mp3" id="4_g1kqb"]
 [ext_resource type="Script" path="res://MC_about_game.gd" id="4_s55ol"]
-[ext_resource type="Texture2D" uid="uid://djxcey5bt6is" path="res://sprites/sprites_v01/background_01.png" id="4_swdsq"]
 [ext_resource type="AudioStream" uid="uid://bn0fl6e2cmvmx" path="res://sound/click_sound_1.mp3" id="5_lyrr6"]
 
 [node name="GIU" type="Control"]
@@ -36,7 +36,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_swdsq")
+texture = ExtResource("4_bxnkt")
 stretch_mode = 6
 
 [node name="MC_top" type="MarginContainer" parent="."]
@@ -45,10 +45,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -89.0
-offset_top = 52.0
-offset_right = 107.0
-offset_bottom = 92.0
+offset_left = -137.0
+offset_top = 80.0
+offset_right = 155.0
+offset_bottom = 120.0
 grow_horizontal = 2
 metadata/_edit_layout_mode = 1
 
@@ -60,19 +60,19 @@ alignment = 1
 
 [node name="L_score_text" type="Label" parent="MC_top/HBox"]
 layout_mode = 2
-offset_top = 10.0
-offset_right = 96.0
-offset_bottom = 29.0
+offset_top = 6.0
+offset_right = 144.0
+offset_bottom = 33.0
 theme_override_font_sizes/font_size = 24
 text = "$SCORE"
 
 [node name="L_score_data" type="Label" parent="MC_top/HBox"]
 unique_name_in_owner = true
 layout_mode = 2
-offset_left = 100.0
-offset_top = 10.0
-offset_right = 196.0
-offset_bottom = 29.0
+offset_left = 148.0
+offset_top = 6.0
+offset_right = 292.0
+offset_bottom = 33.0
 theme_override_font_sizes/font_size = 24
 text = "$SCORE"
 
@@ -90,12 +90,50 @@ offset_right = 720.0
 offset_bottom = 1280.0
 color = Color(0, 0, 0, 0.25098)
 
+[node name="MC_game_name" type="MarginContainer" parent="MC_center"]
+layout_mode = 2
+offset_left = 40.0
+offset_right = 680.0
+offset_bottom = 334.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/margin_top = 200
+
+[node name="VBox_game_name" type="VBoxContainer" parent="MC_center/MC_game_name"]
+layout_mode = 2
+offset_top = 200.0
+offset_right = 640.0
+offset_bottom = 334.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="L_game_name" type="Label" parent="MC_center/MC_game_name/VBox_game_name"]
+layout_mode = 2
+offset_right = 640.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 64
+text = "$GAME_NAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="L_tooltip" type="Label" parent="MC_center/MC_game_name/VBox_game_name"]
+layout_mode = 2
+offset_top = 107.0
+offset_right = 640.0
+offset_bottom = 134.0
+theme_override_font_sizes/font_size = 24
+text = "$SLIDE_TO_TURN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="VBox" type="VBoxContainer" parent="MC_center"]
 layout_mode = 2
-offset_left = 167.0
-offset_top = 519.0
-offset_right = 553.0
-offset_bottom = 761.0
+offset_left = 155.0
+offset_top = 495.0
+offset_right = 565.0
+offset_bottom = 785.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 40
@@ -103,24 +141,26 @@ alignment = 1
 
 [node name="B_start" type="Button" parent="MC_center/VBox"]
 layout_mode = 2
-offset_right = 386.0
-offset_bottom = 56.0
+offset_right = 410.0
+offset_bottom = 72.0
 theme_override_font_sizes/font_size = 48
 text = "$START"
+text_overrun_behavior = 1
+icon_alignment = 1
 
 [node name="B_settings" type="Button" parent="MC_center/VBox"]
 layout_mode = 2
-offset_top = 96.0
-offset_right = 386.0
-offset_bottom = 146.0
+offset_top = 112.0
+offset_right = 410.0
+offset_bottom = 178.0
 theme_override_font_sizes/font_size = 42
 text = "$SETTINGS"
 
 [node name="B_exit" type="Button" parent="MC_center/VBox"]
 layout_mode = 2
-offset_top = 186.0
-offset_right = 386.0
-offset_bottom = 242.0
+offset_top = 218.0
+offset_right = 410.0
+offset_bottom = 290.0
 theme_override_font_sizes/font_size = 48
 shortcut_in_tooltip = false
 action_mode = 0
@@ -143,15 +183,15 @@ metadata/_edit_use_custom_anchors = true
 
 [node name="B_about" type="Button" parent="MC_bottom"]
 layout_mode = 2
-offset_right = 184.0
-offset_bottom = 24.0
+offset_right = 208.0
+offset_bottom = 40.0
 text = "$ABOUT_GAME"
 
 [node name="B_pause" type="Button" parent="MC_bottom"]
 visible = false
 layout_mode = 2
-offset_right = 184.0
-offset_bottom = 24.0
+offset_right = 208.0
+offset_bottom = 40.0
 theme_override_font_sizes/font_size = 32
 text = "$PAUSE_GAME"
 
@@ -172,10 +212,10 @@ color = Color(0, 0, 0, 0.501961)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MC_pause_menu"]
 layout_mode = 2
-offset_left = 167.0
-offset_top = 525.0
-offset_right = 553.0
-offset_bottom = 755.0
+offset_left = 155.0
+offset_top = 501.0
+offset_right = 565.0
+offset_bottom = 779.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 40
@@ -235,10 +275,10 @@ color = Color(0.0941176, 0.0941176, 0.188235, 1)
 
 [node name="VBox" type="VBoxContainer" parent="MC_settings"]
 layout_mode = 2
-offset_left = 116.0
-offset_top = 517.0
-offset_right = 604.0
-offset_bottom = 763.0
+offset_left = 104.0
+offset_top = 493.0
+offset_right = 616.0
+offset_bottom = 787.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 40
@@ -283,51 +323,46 @@ text = "$MENU_HIDE"
 visible = false
 custom_minimum_size = Vector2i(400, 500)
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("4_s55ol")
 
 [node name="ColorRect" type="ColorRect" parent="MC_about_game"]
 layout_mode = 2
-offset_right = 400.0
-offset_bottom = 500.0
-color = Color(0, 0.0156863, 0.180392, 1)
+offset_right = 720.0
+offset_bottom = 1280.0
+color = Color(0.09, 0.09, 0.18, 1)
 
 [node name="VBox" type="VBoxContainer" parent="MC_about_game"]
 layout_mode = 2
-offset_left = 52.0
-offset_top = 30.0
-offset_right = 348.0
-offset_bottom = 470.0
+offset_left = 200.0
+offset_top = 377.0
+offset_right = 520.0
+offset_bottom = 902.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 50
 alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MC_about_game/VBox"]
-layout_mode = 2
-offset_right = 296.0
-offset_bottom = 18.0
-theme_override_font_sizes/normal_font_size = 18
-text = "$ABOUT_GAME"
-fit_content_height = true
-
-[node name="LinkGodot" type="LinkButton" parent="MC_about_game/VBox"]
+[node name="L_external_links" type="Label" parent="MC_about_game/VBox"]
 layout_mode = 2
 offset_top = 68.0
+offset_right = 40.0
+offset_bottom = 84.0
+text = "$EXTERNAL_LINKS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LinkYouTube" type="LinkButton" parent="MC_about_game/VBox"]
+layout_mode = 2
+offset_top = 136.0
 offset_right = 296.0
-offset_bottom = 86.0
+offset_bottom = 154.0
 theme_override_font_sizes/font_size = 18
-text = "$LINK_TO_GODOT"
+text = "$LINK_TO_YOUTUBE"
 
 [node name="LinkGitHub" type="LinkButton" parent="MC_about_game/VBox"]
 layout_mode = 2
@@ -336,6 +371,14 @@ offset_right = 296.0
 offset_bottom = 154.0
 theme_override_font_sizes/font_size = 18
 text = "$LINK_TO_GITHUB"
+
+[node name="LinkGodot" type="LinkButton" parent="MC_about_game/VBox"]
+layout_mode = 2
+offset_top = 68.0
+offset_right = 296.0
+offset_bottom = 86.0
+theme_override_font_sizes/font_size = 18
+text = "$LINK_TO_GODOT"
 
 [node name="LinkMusic" type="LinkButton" parent="MC_about_game/VBox"]
 layout_mode = 2
@@ -388,8 +431,9 @@ stream = ExtResource("5_lyrr6")
 [connection signal="pressed" from="MC_settings/VBox/B_music" to="." method="_on_b_music_pressed"]
 [connection signal="pressed" from="MC_settings/VBox/B_sound" to="." method="_on_b_sound_pressed"]
 [connection signal="pressed" from="MC_settings/VBox/B_menu_hide" to="." method="_on_b_menu_hide_pressed"]
-[connection signal="pressed" from="MC_about_game/VBox/LinkGodot" to="MC_about_game" method="_on_link_godot_pressed"]
+[connection signal="pressed" from="MC_about_game/VBox/LinkYouTube" to="MC_about_game" method="_on_link_you_tube_pressed"]
 [connection signal="pressed" from="MC_about_game/VBox/LinkGitHub" to="MC_about_game" method="_on_link_git_hub_pressed"]
+[connection signal="pressed" from="MC_about_game/VBox/LinkGodot" to="MC_about_game" method="_on_link_godot_pressed"]
 [connection signal="pressed" from="MC_about_game/VBox/LinkMusic" to="MC_about_game" method="_on_link_music_pressed"]
 [connection signal="pressed" from="MC_about_game/VBox/LinkLicense" to="MC_about_game" method="_on_link_license_pressed"]
 [connection signal="pressed" from="MC_about_game/VBox/LinkPrivacy" to="MC_about_game" method="_on_link_privacy_pressed"]
