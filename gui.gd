@@ -54,7 +54,7 @@ func _on_b_start_pressed():
 #	var start_x = %Pos2D.get_global_position().x - 312
 #	var start_y = %Pos2D.get_global_position().y - 480
 #	snake_pit.set_position(Vector2(start_x, start_y))
-	snake_pit.set_position(Vector2(48, 96))
+	snake_pit.set_position(Vector2(48, 120))
 	add_child(snake_pit)
 	snake_pit.pit_need_to_destroyed.connect(on_pit_is_destroyed)
 	# Play music

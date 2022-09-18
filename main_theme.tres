@@ -1,6 +1,30 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b5cjpjxj6fnt7"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bdracemkdlddj"]
 
 [ext_resource type="FontFile" uid="uid://b3fbq8qiqrwtr" path="res://fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="1_0upic"]
+[ext_resource type="StyleBox" uid="uid://b8045orrm2ysd" path="res://flat_blue_button_style.tres" id="1_4hx8a"]
 
 [resource]
 default_font = ExtResource("1_0upic")
+Button/colors/font_color = Color(0.988235, 0.686275, 0.243137, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 2
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/styles/disabled = ExtResource("1_4hx8a")
+Button/styles/focus = ExtResource("1_4hx8a")
+Button/styles/hover = ExtResource("1_4hx8a")
+Button/styles/normal = ExtResource("1_4hx8a")
+Button/styles/pressed = ExtResource("1_4hx8a")
+Label/colors/font_color = Color(0.988235, 0.686275, 0.243137, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
