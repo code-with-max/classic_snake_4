@@ -166,6 +166,7 @@ Uploading the first release of the game to the Play Market for internal testing.
 
 Eng:
 Implement randomly selecting food, floor, and snake tails using copy-paste methods
+[Смотреть на YouTube](https://youtu.be/7JEIKojQ32A)
 
 
 #### 24 Часть. Новый генератор яблок.
@@ -176,4 +177,50 @@ Implement randomly selecting food, floor, and snake tails using copy-paste metho
 eng:
 A new food generator. 
 Now apples are created only on empty floor tiles.
+
+[Смотреть на YouTube](https://youtu.be/HSli5LNO4hc)
+
+
+#### 25 Часть. Игровой счет.
+Все просто - подсчет очков игрока и их отображение на экране.
+
+Использование новой функции из Godot 4 - "Доступ к уникальному имени сцены", очень упростил реализацию и отслеживание постоянных ссылок на элементы меню.
+
+eng:
+It's simple - counting the player's points and displaying them on the screen.
+
+Using a new feature from Godot 4 - "Scene Unique Names", really simplified the implementation and tracking of permanent links to menu items.
+
+[Смотреть на YouTube](https://youtu.be/IqA2eokE3M4)
+
+
+#### 26 Часть. Пауза.
+Все просто - делаю паузу в игре.
+Небольшой бонус: #yield больше не используется в Godot 4, теперь #await и новый синтакс.
+
+It's simple - I'm implementing a pause in the game.
+A small bonus: yield is no longer used in Godot 4, now you need to use "await" with the new syntax
+
+[Смотреть на YouTube](https://youtu.be/MweE6n5qY-I)
+
+
+#### 27 Часть. Центр.
+Улучшаю "костыль" по расчету центр для snake pit.
+(Еще по мелочи подправил меню и дополнил перевод).
+
+[Смотреть на YouTube](https://youtu.be/0IiE9WL4M7w)
+
+
+#### 28 Часть. Звук.
+Добавил к игре немного звуковых эффектов, а именно:
+- Фоновая музыка на уровне
+- Звук нажатия на кнопку
+- Звук съедаемого змеей яблока
+(Используется стандартный AudioStreamPlayer.)
+
+Added music and sound effects to the game:
+- Background music on the level
+- The sound of pressing the button
+- The sound of an apple being eaten by a snake
+(The standard Audio Stream Player is used.)
 
