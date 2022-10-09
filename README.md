@@ -4,7 +4,13 @@
 # "Змейка" для Android
 Реализация варианта классической игры "Змейка" для Android, на игровом движке [Godot](https://github.com/godotengine/godot)
 
+Скачать:
 
+[Google Play Market](https://play.google.com/store/apps/details?id=org.godotengine.classicsnake4)
+
+[Windows](https://github.com/trash-max/classic_snake_4/releases/download/v19/classic_snake_4.exe)
+
+[Linux](https://github.com/trash-max/classic_snake_4/releases/download/v19/classic_snake_4.x86_64)
 
 Девлог о создании:
 [Playlist YouTube](https://youtube.com/playlist?list=PLJn3nbk2RjwTy6ARA4ZfKOphTGhD8gwHb)
