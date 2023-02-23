@@ -227,3 +227,7 @@ Added music and sound effects to the game:
 - The sound of an apple being eaten by a snake
 (The standard Audio Stream Player is used.)
 
+
+#### 29 Часть. Меню настроек.
+Добавлено меню настроек с опциями включения и отключения музыки и звуковых эффектов.
+
