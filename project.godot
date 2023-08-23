@@ -12,7 +12,7 @@ config_version=5
 
 config/name="classic_snake_4"
 run/main_scene="res://gui.tscn"
-config/features=PackedStringArray("4.0", "Vulkan Mobile")
+config/features=PackedStringArray("4.1")
 config/icon="res://icon.png"
 
 [autoload]
@@ -23,9 +23,9 @@ G="*res://globals.gd"
 
 window/size/viewport_width=720
 window/size/viewport_height=1280
-window/handheld/orientation=1
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
+window/handheld/orientation=1
 
 [editor]
 
@@ -49,4 +49,6 @@ locale/translations=PackedStringArray("res://translate/translation.en.translatio
 
 [rendering]
 
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
 vulkan/rendering/back_end=1

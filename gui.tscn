@@ -54,25 +54,16 @@ metadata/_edit_layout_mode = 1
 
 [node name="HBox" type="HBoxContainer" parent="MC_top"]
 layout_mode = 2
-offset_right = 292.0
-offset_bottom = 40.0
 alignment = 1
 
 [node name="L_score_text" type="Label" parent="MC_top/HBox"]
 layout_mode = 2
-offset_top = 6.0
-offset_right = 144.0
-offset_bottom = 33.0
 theme_override_font_sizes/font_size = 24
 text = "$SCORE"
 
 [node name="L_score_data" type="Label" parent="MC_top/HBox"]
 unique_name_in_owner = true
 layout_mode = 2
-offset_left = 148.0
-offset_top = 6.0
-offset_right = 292.0
-offset_bottom = 33.0
 theme_override_font_sizes/font_size = 24
 text = "$SCORE"
 
@@ -86,24 +77,16 @@ grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="MC_center"]
 layout_mode = 2
-offset_right = 720.0
-offset_bottom = 1280.0
 color = Color(0, 0, 0, 0.25098)
 
 [node name="MC_game_name" type="MarginContainer" parent="MC_center"]
 layout_mode = 2
-offset_left = 40.0
-offset_right = 680.0
-offset_bottom = 334.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_constants/margin_top = 200
 
 [node name="VBox_game_name" type="VBoxContainer" parent="MC_center/MC_game_name"]
 layout_mode = 2
-offset_top = 200.0
-offset_right = 640.0
-offset_bottom = 334.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 40
@@ -111,8 +94,6 @@ alignment = 1
 
 [node name="L_game_name" type="Label" parent="MC_center/MC_game_name/VBox_game_name"]
 layout_mode = 2
-offset_right = 640.0
-offset_bottom = 67.0
 theme_override_font_sizes/font_size = 64
 text = "$GAME_NAME"
 horizontal_alignment = 1
@@ -120,9 +101,6 @@ vertical_alignment = 1
 
 [node name="L_tooltip" type="Label" parent="MC_center/MC_game_name/VBox_game_name"]
 layout_mode = 2
-offset_top = 107.0
-offset_right = 640.0
-offset_bottom = 134.0
 theme_override_font_sizes/font_size = 24
 text = "$SLIDE_TO_TURN"
 horizontal_alignment = 1
@@ -130,10 +108,6 @@ vertical_alignment = 1
 
 [node name="VBox" type="VBoxContainer" parent="MC_center"]
 layout_mode = 2
-offset_left = 155.0
-offset_top = 495.0
-offset_right = 565.0
-offset_bottom = 785.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 40
@@ -141,8 +115,6 @@ alignment = 1
 
 [node name="B_start" type="Button" parent="MC_center/VBox"]
 layout_mode = 2
-offset_right = 410.0
-offset_bottom = 72.0
 theme_override_font_sizes/font_size = 48
 text = "$START"
 text_overrun_behavior = 1
@@ -150,20 +122,14 @@ icon_alignment = 1
 
 [node name="B_settings" type="Button" parent="MC_center/VBox"]
 layout_mode = 2
-offset_top = 112.0
-offset_right = 410.0
-offset_bottom = 178.0
 theme_override_font_sizes/font_size = 42
 text = "$SETTINGS"
 
 [node name="B_exit" type="Button" parent="MC_center/VBox"]
 layout_mode = 2
-offset_top = 218.0
-offset_right = 410.0
-offset_bottom = 290.0
 theme_override_font_sizes/font_size = 48
-shortcut_in_tooltip = false
 action_mode = 0
+shortcut_in_tooltip = false
 text = "$EXIT"
 
 [node name="MC_bottom" type="MarginContainer" parent="."]
@@ -183,15 +149,11 @@ metadata/_edit_use_custom_anchors = true
 
 [node name="B_about" type="Button" parent="MC_bottom"]
 layout_mode = 2
-offset_right = 208.0
-offset_bottom = 40.0
 text = "$ABOUT_GAME"
 
 [node name="B_pause" type="Button" parent="MC_bottom"]
 visible = false
 layout_mode = 2
-offset_right = 208.0
-offset_bottom = 40.0
 theme_override_font_sizes/font_size = 32
 text = "$PAUSE_GAME"
 
@@ -206,16 +168,10 @@ grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="MC_pause_menu"]
 layout_mode = 2
-offset_right = 720.0
-offset_bottom = 1280.0
 color = Color(0, 0, 0, 0.501961)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MC_pause_menu"]
 layout_mode = 2
-offset_left = 155.0
-offset_top = 501.0
-offset_right = 565.0
-offset_bottom = 779.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 40
@@ -223,24 +179,16 @@ alignment = 1
 
 [node name="B_resume" type="Button" parent="MC_pause_menu/VBoxContainer"]
 layout_mode = 2
-offset_right = 368.0
-offset_bottom = 56.0
 theme_override_font_sizes/font_size = 48
 text = "$RESUME"
 
 [node name="B_settings" type="Button" parent="MC_pause_menu/VBoxContainer"]
 layout_mode = 2
-offset_top = 60.0
-offset_right = 386.0
-offset_bottom = 110.0
 theme_override_font_sizes/font_size = 42
 text = "$SETTINGS"
 
 [node name="B_gomenu" type="Button" parent="MC_pause_menu/VBoxContainer"]
 layout_mode = 2
-offset_top = 60.0
-offset_right = 368.0
-offset_bottom = 104.0
 theme_override_font_sizes/font_size = 36
 text = "$MAIN_MENU"
 
@@ -269,16 +217,10 @@ grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="MC_settings"]
 layout_mode = 2
-offset_right = 720.0
-offset_bottom = 1280.0
 color = Color(0.0941176, 0.0941176, 0.188235, 1)
 
 [node name="VBox" type="VBoxContainer" parent="MC_settings"]
 layout_mode = 2
-offset_left = 104.0
-offset_top = 493.0
-offset_right = 616.0
-offset_bottom = 787.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 40
@@ -287,8 +229,6 @@ alignment = 1
 [node name="B_music" type="Button" parent="MC_settings/VBox"]
 unique_name_in_owner = true
 layout_mode = 2
-offset_right = 488.0
-offset_bottom = 56.0
 focus_next = NodePath("../B_sound")
 focus_previous = NodePath("../B_menu_hide")
 theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
@@ -299,9 +239,6 @@ text = "$MUSIC"
 [node name="B_sound" type="Button" parent="MC_settings/VBox"]
 unique_name_in_owner = true
 layout_mode = 2
-offset_top = 96.0
-offset_right = 488.0
-offset_bottom = 150.0
 focus_next = NodePath("../B_menu_hide")
 focus_previous = NodePath("../B_music")
 theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
@@ -311,9 +248,6 @@ text = "$SOUND"
 
 [node name="B_menu_hide" type="Button" parent="MC_settings/VBox"]
 layout_mode = 2
-offset_top = 190.0
-offset_right = 488.0
-offset_bottom = 246.0
 focus_next = NodePath("../B_music")
 focus_previous = NodePath("../B_sound")
 theme_override_font_sizes/font_size = 48
@@ -321,7 +255,7 @@ text = "$MENU_HIDE"
 
 [node name="MC_about_game" type="MarginContainer" parent="."]
 visible = false
-custom_minimum_size = Vector2i(400, 500)
+custom_minimum_size = Vector2(400, 500)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -332,16 +266,10 @@ script = ExtResource("4_s55ol")
 
 [node name="ColorRect" type="ColorRect" parent="MC_about_game"]
 layout_mode = 2
-offset_right = 720.0
-offset_bottom = 1280.0
 color = Color(0.09, 0.09, 0.18, 1)
 
 [node name="VBox" type="VBoxContainer" parent="MC_about_game"]
 layout_mode = 2
-offset_left = 200.0
-offset_top = 377.0
-offset_right = 520.0
-offset_bottom = 902.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 50
@@ -349,66 +277,42 @@ alignment = 1
 
 [node name="L_external_links" type="Label" parent="MC_about_game/VBox"]
 layout_mode = 2
-offset_top = 68.0
-offset_right = 40.0
-offset_bottom = 84.0
 text = "$EXTERNAL_LINKS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LinkYouTube" type="LinkButton" parent="MC_about_game/VBox"]
 layout_mode = 2
-offset_top = 136.0
-offset_right = 296.0
-offset_bottom = 154.0
 theme_override_font_sizes/font_size = 18
 text = "$LINK_TO_YOUTUBE"
 
 [node name="LinkGitHub" type="LinkButton" parent="MC_about_game/VBox"]
 layout_mode = 2
-offset_top = 136.0
-offset_right = 296.0
-offset_bottom = 154.0
 theme_override_font_sizes/font_size = 18
 text = "$LINK_TO_GITHUB"
 
 [node name="LinkGodot" type="LinkButton" parent="MC_about_game/VBox"]
 layout_mode = 2
-offset_top = 68.0
-offset_right = 296.0
-offset_bottom = 86.0
 theme_override_font_sizes/font_size = 18
 text = "$LINK_TO_GODOT"
 
 [node name="LinkMusic" type="LinkButton" parent="MC_about_game/VBox"]
 layout_mode = 2
-offset_top = 204.0
-offset_right = 296.0
-offset_bottom = 222.0
 theme_override_font_sizes/font_size = 18
 text = "$LINK_TO_MUSIC"
 
 [node name="LinkLicense" type="LinkButton" parent="MC_about_game/VBox"]
 layout_mode = 2
-offset_top = 272.0
-offset_right = 296.0
-offset_bottom = 290.0
 theme_override_font_sizes/font_size = 18
 text = "$LICENSE"
 
 [node name="LinkPrivacy" type="LinkButton" parent="MC_about_game/VBox"]
 layout_mode = 2
-offset_top = 340.0
-offset_right = 296.0
-offset_bottom = 358.0
 theme_override_font_sizes/font_size = 18
 text = "$PRIVACY_POLICY"
 
 [node name="B_close" type="Button" parent="MC_about_game/VBox"]
 layout_mode = 2
-offset_top = 408.0
-offset_right = 296.0
-offset_bottom = 440.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 24

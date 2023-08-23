@@ -41,6 +41,7 @@ offset_bottom = 40.0
 theme = SubResource("Theme_7b3uf")
 
 [node name="Rel" type="Label" parent="Debug_labels"]
+layout_mode = 0
 offset_left = 424.0
 offset_top = 99.0
 offset_right = 464.0
