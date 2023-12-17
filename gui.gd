@@ -6,17 +6,35 @@ extends Control
 
 var snake_pit
 
+# RateMe singleton
+var _rate_me_addon
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# RateMe init, if game run on Android
+	if Engine.has_singleton("GodotAndroidRateme"):
+		_rate_me_addon = Engine.get_singleton("GodotAndroidRateme")
+		_rate_me_addon.completed.connect(self._on_rateme_completed)
+		_rate_me_addon.error.connect(self._on_rateme_error) # use err as string
+	else:
+		printerr("Couldn't find RateMe singleton")
+	#
+	
 	$CR_backgroung.set_color(Color.DARK_CYAN)
 	if G.DEBUG:
 		print("start")
+	#if _rate_me_addon:
+		#_rate_me_addon.show()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(_delta):
-#	pass
+func _on_rateme_error(err):
+	printerr("ERROR due Rate Me: " + str(err))
+
+
+func _on_rateme_completed():
+	print("Rate Me completed")
+
 
 # Redrawing actual status game score
 func redraw_score_label():
@@ -141,3 +159,8 @@ func _on_b_sound_pressed():
 
 func _on_b_about_pressed():
 	$MC_about_game.show()
+
+
+func _on_b_rate_pressed() -> void:
+	if _rate_me_addon:
+		_rate_me_addon.show()

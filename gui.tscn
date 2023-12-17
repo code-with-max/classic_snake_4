@@ -132,6 +132,13 @@ action_mode = 0
 shortcut_in_tooltip = false
 text = "$EXIT"
 
+[node name="B_rate" type="Button" parent="MC_center/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+action_mode = 0
+shortcut_in_tooltip = false
+text = "$RATEME"
+
 [node name="MC_bottom" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 7
@@ -327,6 +334,7 @@ stream = ExtResource("5_lyrr6")
 [connection signal="pressed" from="MC_center/VBox/B_start" to="." method="_on_b_start_pressed"]
 [connection signal="pressed" from="MC_center/VBox/B_settings" to="." method="_on_b_settings_pressed"]
 [connection signal="pressed" from="MC_center/VBox/B_exit" to="." method="_on_b_exit_pressed"]
+[connection signal="pressed" from="MC_center/VBox/B_rate" to="." method="_on_b_rate_pressed"]
 [connection signal="pressed" from="MC_bottom/B_about" to="." method="_on_b_about_pressed"]
 [connection signal="pressed" from="MC_bottom/B_pause" to="." method="_on_b_pause_pressed"]
 [connection signal="pressed" from="MC_pause_menu/VBoxContainer/B_resume" to="." method="_on_b_resume_pressed"]

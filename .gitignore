@@ -1,8 +1,13 @@
+# Godot 4+ specific ignores
+.godot/
+
+# Godot-specific ignores
+.import/
 export.cfg
 export_presets.cfg
 
-# Godot 4+ specific ignores
-.godot/
+# Dummy HTML5 export presets file for continuous integration
+!.github/dist/export_presets.cfg
 
 # Android builds
 android/
@@ -14,6 +19,12 @@ android/
 .mono/
 data_*/
 mono_crash.*.json
+
+# System/tool-specific ignores
+.directory
+.DS_Store
+*~
+*.blend1
 
 # Logs
 *.log
